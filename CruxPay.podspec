@@ -8,13 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'CruxPay'
-<<<<<<< HEAD
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of CruxPay.'
-=======
   s.version          = '0.0.1'
   s.summary          = 'CruxPay iOS SDK'
->>>>>>> d7c1916e78d88d0525aee9342e03f02efd38cc03
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -22,18 +17,6 @@ Pod::Spec.new do |s|
 #   * Write the description between the DESC delimiters below.
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
-<<<<<<< HEAD
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
-  s.homepage         = 'https://github.com/SanchayPahalwani/CruxPay'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'SanchayPahalwani' => 'sanchay.pahalwani@gmail.com' }
-  s.source           = { :git => 'https://github.com/SanchayPahalwani/CruxPay.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-=======
   s.description      = 'CruxPay is a protocol which aims to link any blockchain address to a human-readable name, and let users interact with each other and dApps with ease.'
 
   s.homepage         = 'https://github.com/cruxprotocol/ios-sdk'
@@ -42,28 +25,17 @@ TODO: Add long description of the pod here.
   s.author           = { 'CoinSwitch' => 'dev@coinswitch.co' }
   s.source           = { :git => 'https://github.com/cruxprotocol/ios-sdk.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/cruxpay'
->>>>>>> d7c1916e78d88d0525aee9342e03f02efd38cc03
 
   s.ios.deployment_target = '10.0'
 
   s.source_files = 'CruxPay/Classes/**/*'
   
-<<<<<<< HEAD
-  # s.resource_bundles = {
-  #   'CruxPay' => ['CruxPay/Assets/*.png']
-  # }
-=======
   s.resource_bundles = {
     'CruxPay' => ['CruxPay/Assets/*.js']
   }
->>>>>>> d7c1916e78d88d0525aee9342e03f02efd38cc03
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
   # s.dependency 'AFNetworking', '~> 2.3'
   s.dependency 'CryptoSwift', '0.15.0'
-<<<<<<< HEAD
-  s.dependency 'PromiseKit'
-=======
->>>>>>> d7c1916e78d88d0525aee9342e03f02efd38cc03
 end
