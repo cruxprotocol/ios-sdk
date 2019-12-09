@@ -1,0 +1,6 @@
+use_frameworks!
+target 'CruxPay_Tests' do
+  pod 'CruxPay', :path => '../'
+  
+  
+end

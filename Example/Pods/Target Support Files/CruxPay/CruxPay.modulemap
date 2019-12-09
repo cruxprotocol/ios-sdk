@@ -1,0 +1,6 @@
+framework module CruxPay {
+  umbrella header "CruxPay-umbrella.h"
+
+  export *
+  module * { export * }
+}

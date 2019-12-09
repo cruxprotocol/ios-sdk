@@ -1,0 +1,1239 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		037FA290784A8BB9BE5BD93EBE8925FC /* UInt16+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E380CA8E93F42F0DB8ECA36239EB9573 /* UInt16+Extension.swift */; };
+		064B33674073204A215E919067613233 /* AEADChaCha20Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1EEEEEF072035E0779A35C024A5AF892 /* AEADChaCha20Poly1305.swift */; };
+		068E8D771AA3573A965B8AE15246B212 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994E2484D767F54B4DEAD58333A47F61 /* PKCS5.swift */; };
+		088F750A7008CAE6F06D30C02BCAD730 /* BatchedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FA434695AB96AC54730F51D9E1298 /* BatchedCollection.swift */; };
+		0AE7284DD616104779E37DD61641FD05 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A07487DB1BBE4DA2245FEC9B58A05A /* Authenticator.swift */; };
+		0C980876375204BB5D9BFC5A4EEE9DB9 /* cruxpay.js in Resources */ = {isa = PBXBuildFile; fileRef = D13E69599DEC37AF4E5118DF1EA0A51E /* cruxpay.js */; };
+		0CDDEC244D717907CCD2A23A8FDB8D52 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7CCE3A12746451F8002437B5B5EA9 /* UInt8+Extension.swift */; };
+		0DC78BCB408E396FBDD59E7AEAB202C3 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60D46E2EC3F0119899DF723AD2F9ED /* AES.swift */; };
+		0FD8BC574710FF5F29EAB0DD98148FA8 /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE549C9C07EBBE77E90FE71EDED6841 /* CBCMAC.swift */; };
+		161EE02BA60521CC481285B3D3838951 /* CBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60E1D326A985689A09E698CD8F99E8B9 /* CBC.swift */; };
+		18D9499DDE3BF4CD2AAE07F85DEE22B2 /* UInt128.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3914AD97ED2CAE3345300903F0A021A6 /* UInt128.swift */; };
+		19EDBBD81BCDF746E3505B652D05890C /* CFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D927BB31BCE09435AE6868B0BB22F7E /* CFB.swift */; };
+		1C522F569D548F931E105325E5724405 /* BlockDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43B6DA1BAA7717E2354BAB3EF8CE2122 /* BlockDecryptor.swift */; };
+		1F2A128640740BE3ABE24ABC31311ECC /* CTR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF356E3B441720CF79357F21CA2187F /* CTR.swift */; };
+		286A2CB42669E479090B6FD23AE9D60A /* SHA3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5154CE379135727EE9561F93F8BEE758 /* SHA3.swift */; };
+		287871D47B2EDD929C937487509419D4 /* AES+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA7CD7136E34683DFFFDDA4BAA4FCB2 /* AES+Foundation.swift */; };
+		289E64C43B7415979E74CCDC7CBDE655 /* JavaScriptInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = F69F06CFD0088CA07115E583ECCCBEA1 /* JavaScriptInterval.swift */; };
+		2A87B81745F2DA7F3511E295C6221844 /* OFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E10E16599FB35BD2BF5327BB143EEF24 /* OFB.swift */; };
+		2E2637FB267B5C6B4F73A97FBF5DFDC2 /* StreamDecryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BD270254CC425FC15F201C2C01177C /* StreamDecryptor.swift */; };
+		32279D19141EF38CD4A6FC14BBA56A2F /* HMAC+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB1F00206101BB3E5018E1D61D85AC8D /* HMAC+Foundation.swift */; };
+		36AAC68E2E2ED0C90FFB181605870ACB /* Rabbit+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CBAD25CC6834BAD0CD253AA8D5FF7FB /* Rabbit+Foundation.swift */; };
+		372693AE54BF65E63D5736ED49E8BE63 /* String+FoundationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D8C8F41A74BECBEE5FE909DA636E935 /* String+FoundationExtension.swift */; };
+		3BDBE002A76624722F2AE39A4F78923A /* CruxPay.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 197FCE59488A43D413E46F2033183D94 /* CruxPay.bundle */; };
+		3F03B8C2730BCCDAB7383746BA5DBBA1 /* Data+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453A0533BD070EDD37550B10A283DF04 /* Data+Extension.swift */; };
+		3F255283D0092945577F9D2EDB350819 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6B7287CD37AB3276F9DAEC59DBDAA1C /* SHA1.swift */; };
+		3F5C96D4AE99E50B3D6159F11CBBCF0C /* AEAD.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABC0342D20C6B6D5137CF43DFEA0197C /* AEAD.swift */; };
+		42B7AB27BF6818BB0FB0D38C82992736 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93CA584CDFADA55673FF7894A1FF98 /* Foundation.framework */; };
+		43804FD403922EE3955F9B48D649CFD3 /* CryptoSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 882C7924A9F74C741EB56E37808E89EF /* CryptoSwift-dummy.m */; };
+		4C57434CA54F84A0A4C80510175C97B8 /* CompactMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE06C528BFEAE88FD77748FAC63E56F2 /* CompactMap.swift */; };
+		4CAC8D58DF45D68CD95D8F99EA08C2A0 /* JavaScriptNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = B76B539D2B91425F32EC88B55FF1D68B /* JavaScriptNetworking.swift */; };
+		502D88FD791758994F657FF288835C96 /* CMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD737797B74F2C42018A4A581E45F5CD /* CMAC.swift */; };
+		5185B6D0B0D0AE245D83FF6143FE2DD2 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A004C44DEB901928C755E67ADEAC75D2 /* Collection+Extension.swift */; };
+		52CBB876898ECC1AD55F832EB8930FBB /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CB151BC0F0328143362944FE7AD5DF /* HMAC.swift */; };
+		55A6065AC0101E6F615CC3F01DD01503 /* Bit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F77DFB91F45364609EA8FD67AEC180A /* Bit.swift */; };
+		58D7FDEF5F8C44155D8C73FCE6336241 /* CruxPay-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 45A219C2108D9A55D5AEBF83D8C8186D /* CruxPay-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5AA3672882AB2A912496217D3DBF97C7 /* Updatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15E452AA6BB4B89E782114060D8D53CB /* Updatable.swift */; };
+		6505B8D4052BA21267EBDD364001BE85 /* ECB.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1756350FA057317994FF9AD9DFA52B7 /* ECB.swift */; };
+		695C01379BFEE2A30C6313C279E56AF7 /* GCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77C74206827D4F5CE2E4D281A466367 /* GCM.swift */; };
+		6DCC3D8FF23BE48F5715322871FDA920 /* requestDeps.js in Resources */ = {isa = PBXBuildFile; fileRef = 2F0A2DECC105BB102D7A83AB2607A485 /* requestDeps.js */; };
+		6EB54A5590D922011DA3E281EC903579 /* AES.Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB1E1E3353C89AA1F7BECFFC36FA25D8 /* AES.Cryptors.swift */; };
+		71BC8BD7F95BC4F78C25A6A7D9DD577C /* ZeroPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F17C75B36F8555C56FFFA776055CE65 /* ZeroPadding.swift */; };
+		745F22D6BF6635B170AE51C7E4C1E30D /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805918CA299172DB07644AB587436A2F /* SHA2.swift */; };
+		765E952682F7363A71EDAD9D794C663F /* ChaCha20+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC9601FA35C57774D5843AA20AFF52C8 /* ChaCha20+Foundation.swift */; };
+		79AC4E39CA4F4114167EC74F33DD31F3 /* PBKDF2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF810CE751D6C2F7ACB645306DA6AC56 /* PBKDF2.swift */; };
+		7C76A9E9E4F84BD21A8661A0CF6E174A /* SecureBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5F2E7800B186E1D8BD4F3792F48C33 /* SecureBytes.swift */; };
+		7D4895D0BE686F53585FAAB87A68DBDC /* Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BC1FAA89559F5F9B556581D010106AD /* Padding.swift */; };
+		7F52F3CAD1DF285F4F31C4525F90F832 /* PCBC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C6BE7455675795CE8B88101BBD3DB30 /* PCBC.swift */; };
+		7FB21491FFA16A409EA76050F08258F8 /* Poly1305.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFB20EBC69A29677D4BB35F953160E8 /* Poly1305.swift */; };
+		8050BF3B39EAB2B3436BA9C5DABEBC9E /* ChaCha20.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7548D4AB14ABF9C460E569B73C9E0898 /* ChaCha20.swift */; };
+		819DECF5255B8A88628965C63DB07BD7 /* PBKDF1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB00EF8C4A6C9BA92060A96FC0E407C /* PBKDF1.swift */; };
+		8354F70045FC9C8E60063D2F05BC224F /* Cipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EBDD1B36A94B106D3179DD0C70D51C /* Cipher.swift */; };
+		89C521448B402B71792118E1F8437889 /* CruxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B5CE5BF70DCCBEF789DB88546FA854 /* CruxClient.swift */; };
+		927ED2DE62DA8F7DC881D7AC1DFDC89A /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A10B0038024A558D0139470D18C249 /* Operators.swift */; };
+		9396A9E2DEAC7C44753E856BB093F861 /* PKCS7Padding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E479620B733F9C961C139BBB3FE3C42 /* PKCS7Padding.swift */; };
+		97C4A2BB2E09670F423EB33EEB1C2DA3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93CA584CDFADA55673FF7894A1FF98 /* Foundation.framework */; };
+		A3BB076DECFC8393628BD07F3C16A736 /* RandomBytesSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1DFC1F8576E393FFA8AC98D898E199 /* RandomBytesSequence.swift */; };
+		A6C536EB8D22738363875B9B51BD39F2 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1647A3B4829947F02371B9FA5614F4E5 /* CryptoSwift.framework */; };
+		A91154B8378B9093E449208BDC9A9D13 /* Pods-CruxPay_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C0D4332D1AD84C4D0BE80ADC803B76D /* Pods-CruxPay_Tests-dummy.m */; };
+		A9A5442A8D421B89B8FB77D43B0E7AF5 /* Utils+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DA78951C2C0E9E14DD648D7F5279CB9 /* Utils+Foundation.swift */; };
+		AE10BB53BE6B2822137FC6EA78BBBFD3 /* UInt32+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F144081AF867B03D108C79CD4BF32BBD /* UInt32+Extension.swift */; };
+		AF84754000F820BF4976D1C20D34F512 /* BlockCipher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F88A386D7C42013AAD51284842D3AF /* BlockCipher.swift */; };
+		B10F8F492FC1C1A19219465C8E14DBA7 /* NoPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6917E6B98C8971E97928D639BCAB62CC /* NoPadding.swift */; };
+		B40A771D1866231A00013B2018AEA607 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0C9DE8A565EC37C667EB1A48518EFA4 /* Utils.swift */; };
+		B71BBC76E620B35D85CD9EAADE692F21 /* HKDF.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDFB85B342F13C953F5FEDE3511CE488 /* HKDF.swift */; };
+		B9C11D1C8D73C793C4433740C3BEC361 /* Array+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1EB4BB2C165DF2D8160937683144E /* Array+Foundation.swift */; };
+		BD53009205625CFE4DE761FC9CAB6BCD /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A434943AF00A0746E68B268C3DDF9FD6 /* Rabbit.swift */; };
+		BEA8EECB7290F00B9B21B3CCF9E0EF42 /* CruxPay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5659D711FF8F0A4787B3CB3F487F38C2 /* CruxPay-dummy.m */; };
+		C1B93DBE35DCEE9CA02D3524524A2FC1 /* DigestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC5F76E71173073A70D32C0CF5BD39 /* DigestType.swift */; };
+		C31A555E2D25D1D3C49C86B420C9C890 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0080E3390F3817F6118755AEDAF13 /* CCM.swift */; };
+		C47F0CECFAA4675B2C3ED06E489A9C60 /* PKCS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4752C0C0C709634A51D4961871B2E9E /* PKCS7.swift */; };
+		C692C0EEE42564C6E578BEA1787C4175 /* Scrypt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00E1E6D9A1AA963BDA8DE433487E791 /* Scrypt.swift */; };
+		CA7DCE722E56A1C06C58EEFDD8CD4189 /* Digest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86CCB8C1D47991860D5C7DF5C19CA485 /* Digest.swift */; };
+		CDC4D75A54359889670928C811A9ABD4 /* Generics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652E75D8184B35AE2914221EEA22632B /* Generics.swift */; };
+		CECE150789ABE39F37E60392868CE6D7 /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8763CDD1BC9163E421A224599F62E2 /* DataTypes.swift */; };
+		D067A308A26E2147D26E9A90FE5AC6C5 /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7FD5E01907013A26BDD3F3BC2D0200 /* String+Extension.swift */; };
+		D1611F60BA46C7F26EE0105D08867D62 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE93CA584CDFADA55673FF7894A1FF98 /* Foundation.framework */; };
+		D1B1C214C9C07DEE6AF2BA160BD41AE6 /* Cryptors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35E39CC620C5B19D236C2AC1C94C7 /* Cryptors.swift */; };
+		D36B7F49DB3E740EB97CB4F751052318 /* Cryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6DB96A95741990957FB40B8299D4D3D /* Cryptor.swift */; };
+		D8EC99D91FF4C468F040921459936950 /* CryptoSwift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54875B1E096AA54CA6D00250734682FF /* CryptoSwift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DA852B5EA2B59CFB71FF18FEA85DDB5A /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7EEA1342EBAA3F849102B3D01C9323 /* Array+Extension.swift */; };
+		DFCCDE3C721A5417EC4742D4833F506B /* BlockEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90328E5F61B08E3686E5F008508F21BE /* BlockEncryptor.swift */; };
+		E1757179DC940E69C46BFED2CE2A14F0 /* CruxJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C3558C2869B49485FA6CC23942CD42 /* CruxJSBridge.swift */; };
+		E39DD7D2A584E86C476F2B4CA18BB4B4 /* Pods-CruxPay_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B0AA23537F7CCE494F326520C02421C3 /* Pods-CruxPay_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EA010C563B85D20D3A7202327893CA2B /* Checksum.swift in Sources */ = {isa = PBXBuildFile; fileRef = D27F77414ACC3955CDCE33751684215B /* Checksum.swift */; };
+		EDC425FF03422546E4DF84F6E5A040A7 /* promiseDeps.js in Resources */ = {isa = PBXBuildFile; fileRef = AD1041DE9BF8F09CFD0B4EDD3F44F478 /* promiseDeps.js */; };
+		F21D921F4C482E29AE6FED8FE0A10CCD /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3278F0698A5F5D0A60B8F30973223B37 /* MD5.swift */; };
+		F3E59286DD8A37197D12F323546529B7 /* Blowfish.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD330339BFBBCC2B7CAEADB188D962B7 /* Blowfish.swift */; };
+		F49272C9422A3805C4CCA028E0762ABA /* BlockModeOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2F1A8F355410C122D96451C2326F32 /* BlockModeOptions.swift */; };
+		F55DFA22C03B34D2722505677E2FE57B /* CipherModeWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50793183C79B4FF6F4D00A1F9C016A0 /* CipherModeWorker.swift */; };
+		F59F777DC5CE77FD88AE4428653BC2BD /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848DE8B2DF84C73980BC09C0A8BF9408 /* Int+Extension.swift */; };
+		F72887BA0E6830EBAFEB5DB24B5B97BD /* UInt64+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA703C1CD3E93C39C8592829B197E71 /* UInt64+Extension.swift */; };
+		FAD6D12C31DD154067A754E506A88A0C /* BlockMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 621DC0B135EE579DC5B4A5AADD3DEB69 /* BlockMode.swift */; };
+		FE1C2B55B4529B80E028D7E092556EC4 /* Blowfish+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B30CC15F9DF0D46C94F24AF1F77C55CC /* Blowfish+Foundation.swift */; };
+		FEE58BD2D7317EC600B0B2202F45E2B5 /* StreamEncryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4300FB78BD7FD6311E25B5BDCF14C9F /* StreamEncryptor.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66D3244FE6E937A638F191BAB692BFD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99313990C1D76A6D1D017868B6975CC8;
+			remoteInfo = CryptoSwift;
+		};
+		C19EEB81FC1D6C25E94E1E4E54E56CB8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2141A0C8669CBF1003A63DBF2BF3F2FC;
+			remoteInfo = CruxPay;
+		};
+		DE936764E2E2B7724FCE4AD0D9FF97EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 99313990C1D76A6D1D017868B6975CC8;
+			remoteInfo = CryptoSwift;
+		};
+		F410ADBC30D66F0B65E42FE3AADD2831 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DACC8205BA570FABCA50D87735B96C7;
+			remoteInfo = "CruxPay-CruxPay";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C0D4332D1AD84C4D0BE80ADC803B76D /* Pods-CruxPay_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CruxPay_Tests-dummy.m"; sourceTree = "<group>"; };
+		0CFB20EBC69A29677D4BB35F953160E8 /* Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Poly1305.swift; path = Sources/CryptoSwift/Poly1305.swift; sourceTree = "<group>"; };
+		0EE549C9C07EBBE77E90FE71EDED6841 /* CBCMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBCMAC.swift; path = Sources/CryptoSwift/CBCMAC.swift; sourceTree = "<group>"; };
+		0FB00EF8C4A6C9BA92060A96FC0E407C /* PBKDF1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF1.swift; path = Sources/CryptoSwift/PKCS/PBKDF1.swift; sourceTree = "<group>"; };
+		15E452AA6BB4B89E782114060D8D53CB /* Updatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updatable.swift; path = Sources/CryptoSwift/Updatable.swift; sourceTree = "<group>"; };
+		1647A3B4829947F02371B9FA5614F4E5 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18B5CE5BF70DCCBEF789DB88546FA854 /* CruxClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CruxClient.swift; path = CruxPay/Classes/CruxClient.swift; sourceTree = "<group>"; };
+		197FCE59488A43D413E46F2033183D94 /* CruxPay.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CruxPay.bundle; path = "CruxPay-CruxPay.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1EEEEEF072035E0779A35C024A5AF892 /* AEADChaCha20Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEADChaCha20Poly1305.swift; path = Sources/CryptoSwift/AEAD/AEADChaCha20Poly1305.swift; sourceTree = "<group>"; };
+		1F77DFB91F45364609EA8FD67AEC180A /* Bit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bit.swift; path = Sources/CryptoSwift/Bit.swift; sourceTree = "<group>"; };
+		2C9F4AC947A6711BDFB34606D238CD76 /* Pods-CruxPay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CruxPay_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		2F0A2DECC105BB102D7A83AB2607A485 /* requestDeps.js */ = {isa = PBXFileReference; includeInIndex = 1; name = requestDeps.js; path = CruxPay/Assets/requestDeps.js; sourceTree = "<group>"; };
+		3278F0698A5F5D0A60B8F30973223B37 /* MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Sources/CryptoSwift/MD5.swift; sourceTree = "<group>"; };
+		3914AD97ED2CAE3345300903F0A021A6 /* UInt128.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt128.swift; path = Sources/CryptoSwift/UInt128.swift; sourceTree = "<group>"; };
+		3D927BB31BCE09435AE6868B0BB22F7E /* CFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFB.swift; path = Sources/CryptoSwift/BlockMode/CFB.swift; sourceTree = "<group>"; };
+		40A10B0038024A558D0139470D18C249 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/CryptoSwift/Operators.swift; sourceTree = "<group>"; };
+		41D4713415974BC20AC4D7A4A659B542 /* CruxPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CruxPay.framework; path = CruxPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41EBDD1B36A94B106D3179DD0C70D51C /* Cipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cipher.swift; path = Sources/CryptoSwift/Cipher.swift; sourceTree = "<group>"; };
+		43B6DA1BAA7717E2354BAB3EF8CE2122 /* BlockDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockDecryptor.swift; path = Sources/CryptoSwift/BlockDecryptor.swift; sourceTree = "<group>"; };
+		44B7CCE3A12746451F8002437B5B5EA9 /* UInt8+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt8+Extension.swift"; path = "Sources/CryptoSwift/UInt8+Extension.swift"; sourceTree = "<group>"; };
+		450FA434695AB96AC54730F51D9E1298 /* BatchedCollection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BatchedCollection.swift; path = Sources/CryptoSwift/BatchedCollection.swift; sourceTree = "<group>"; };
+		453A0533BD070EDD37550B10A283DF04 /* Data+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Extension.swift"; path = "Sources/CryptoSwift/Foundation/Data+Extension.swift"; sourceTree = "<group>"; };
+		45A219C2108D9A55D5AEBF83D8C8186D /* CruxPay-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CruxPay-umbrella.h"; sourceTree = "<group>"; };
+		45F0080E3390F3817F6118755AEDAF13 /* CCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CCM.swift; path = Sources/CryptoSwift/BlockMode/CCM.swift; sourceTree = "<group>"; };
+		47A85BB6C9575B273369313D2D11F96E /* Pods-CruxPay_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CruxPay_Tests-Info.plist"; sourceTree = "<group>"; };
+		494CCDBCAA99CFE3E6243C06B1EA3803 /* ResourceBundle-CruxPay-CruxPay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-CruxPay-CruxPay-Info.plist"; sourceTree = "<group>"; };
+		4D57688A3DA9DD807100D9389004ED81 /* CruxPay-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CruxPay-prefix.pch"; sourceTree = "<group>"; };
+		4E60D46E2EC3F0119899DF723AD2F9ED /* AES.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AES.swift; path = Sources/CryptoSwift/AES.swift; sourceTree = "<group>"; };
+		5154CE379135727EE9561F93F8BEE758 /* SHA3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA3.swift; path = Sources/CryptoSwift/SHA3.swift; sourceTree = "<group>"; };
+		520398A453F7EEC9D4E001916D79354A /* CryptoSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-prefix.pch"; sourceTree = "<group>"; };
+		54875B1E096AA54CA6D00250734682FF /* CryptoSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "CryptoSwift-umbrella.h"; sourceTree = "<group>"; };
+		5659D711FF8F0A4787B3CB3F487F38C2 /* CruxPay-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CruxPay-dummy.m"; sourceTree = "<group>"; };
+		57BD270254CC425FC15F201C2C01177C /* StreamDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamDecryptor.swift; path = Sources/CryptoSwift/StreamDecryptor.swift; sourceTree = "<group>"; };
+		5BA7CD7136E34683DFFFDDA4BAA4FCB2 /* AES+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "AES+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/AES+Foundation.swift"; sourceTree = "<group>"; };
+		5D7EEA1342EBAA3F849102B3D01C9323 /* Array+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Extension.swift"; path = "Sources/CryptoSwift/Array+Extension.swift"; sourceTree = "<group>"; };
+		60A585F3D7D8A1E550B02E72682C0824 /* Pods-CruxPay_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CruxPay_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		60E1D326A985689A09E698CD8F99E8B9 /* CBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CBC.swift; path = Sources/CryptoSwift/BlockMode/CBC.swift; sourceTree = "<group>"; };
+		621DC0B135EE579DC5B4A5AADD3DEB69 /* BlockMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockMode.swift; path = Sources/CryptoSwift/BlockMode/BlockMode.swift; sourceTree = "<group>"; };
+		63A07487DB1BBE4DA2245FEC9B58A05A /* Authenticator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Authenticator.swift; path = Sources/CryptoSwift/Authenticator.swift; sourceTree = "<group>"; };
+		652E75D8184B35AE2914221EEA22632B /* Generics.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Generics.swift; path = Sources/CryptoSwift/Generics.swift; sourceTree = "<group>"; };
+		655A7847FF6226E5ADF4115C7982732C /* CruxPay.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CruxPay.modulemap; sourceTree = "<group>"; };
+		6917E6B98C8971E97928D639BCAB62CC /* NoPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NoPadding.swift; path = Sources/CryptoSwift/NoPadding.swift; sourceTree = "<group>"; };
+		6BC1FAA89559F5F9B556581D010106AD /* Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Padding.swift; path = Sources/CryptoSwift/Padding.swift; sourceTree = "<group>"; };
+		6CBAD25CC6834BAD0CD253AA8D5FF7FB /* Rabbit+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Rabbit+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Rabbit+Foundation.swift"; sourceTree = "<group>"; };
+		6D8C8F41A74BECBEE5FE909DA636E935 /* String+FoundationExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+FoundationExtension.swift"; path = "Sources/CryptoSwift/Foundation/String+FoundationExtension.swift"; sourceTree = "<group>"; };
+		6DA78951C2C0E9E14DD648D7F5279CB9 /* Utils+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Utils+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Utils+Foundation.swift"; sourceTree = "<group>"; };
+		7548D4AB14ABF9C460E569B73C9E0898 /* ChaCha20.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChaCha20.swift; path = Sources/CryptoSwift/ChaCha20.swift; sourceTree = "<group>"; };
+		79AC5F76E71173073A70D32C0CF5BD39 /* DigestType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DigestType.swift; path = Sources/CryptoSwift/DigestType.swift; sourceTree = "<group>"; };
+		7C6BE7455675795CE8B88101BBD3DB30 /* PCBC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PCBC.swift; path = Sources/CryptoSwift/BlockMode/PCBC.swift; sourceTree = "<group>"; };
+		7DF356E3B441720CF79357F21CA2187F /* CTR.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CTR.swift; path = Sources/CryptoSwift/BlockMode/CTR.swift; sourceTree = "<group>"; };
+		7FDC70BD406FCF9ED6E97D66E33D535F /* CryptoSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CryptoSwift.xcconfig; sourceTree = "<group>"; };
+		8048147B6ED5012E65422AEAB3A1216A /* Pods-CruxPay_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CruxPay_Tests.modulemap"; sourceTree = "<group>"; };
+		805918CA299172DB07644AB587436A2F /* SHA2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA2.swift; path = Sources/CryptoSwift/SHA2.swift; sourceTree = "<group>"; };
+		848DE8B2DF84C73980BC09C0A8BF9408 /* Int+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+Extension.swift"; path = "Sources/CryptoSwift/Int+Extension.swift"; sourceTree = "<group>"; };
+		86CCB8C1D47991860D5C7DF5C19CA485 /* Digest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Digest.swift; path = Sources/CryptoSwift/Digest.swift; sourceTree = "<group>"; };
+		882C7924A9F74C741EB56E37808E89EF /* CryptoSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "CryptoSwift-dummy.m"; sourceTree = "<group>"; };
+		8B7FD5E01907013A26BDD3F3BC2D0200 /* String+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extension.swift"; path = "Sources/CryptoSwift/String+Extension.swift"; sourceTree = "<group>"; };
+		8E479620B733F9C961C139BBB3FE3C42 /* PKCS7Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7Padding.swift; path = Sources/CryptoSwift/PKCS/PKCS7Padding.swift; sourceTree = "<group>"; };
+		8EE1873195E99E033BC47BD0AD540353 /* CruxPay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CruxPay-Info.plist"; sourceTree = "<group>"; };
+		90328E5F61B08E3686E5F008508F21BE /* BlockEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockEncryptor.swift; path = Sources/CryptoSwift/BlockEncryptor.swift; sourceTree = "<group>"; };
+		9544FC5F8C243A544BED571DC0CB7D53 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		96B1EB4BB2C165DF2D8160937683144E /* Array+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Array+Foundation.swift"; sourceTree = "<group>"; };
+		994E2484D767F54B4DEAD58333A47F61 /* PKCS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS5.swift; path = Sources/CryptoSwift/PKCS/PKCS5.swift; sourceTree = "<group>"; };
+		99FEB348A1CDD57F46ACDCE1DD5C744D /* Pods-CruxPay_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CruxPay_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9F17C75B36F8555C56FFFA776055CE65 /* ZeroPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZeroPadding.swift; path = Sources/CryptoSwift/ZeroPadding.swift; sourceTree = "<group>"; };
+		A004C44DEB901928C755E67ADEAC75D2 /* Collection+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Extension.swift"; path = "Sources/CryptoSwift/Collection+Extension.swift"; sourceTree = "<group>"; };
+		A017FFB5912DD26F49E0DF5CDD3A5AF2 /* CruxPay.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CruxPay.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A1756350FA057317994FF9AD9DFA52B7 /* ECB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECB.swift; path = Sources/CryptoSwift/BlockMode/ECB.swift; sourceTree = "<group>"; };
+		A2A0E1A2C839D991CFAD3FF45BBE98EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A434943AF00A0746E68B268C3DDF9FD6 /* Rabbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rabbit.swift; path = Sources/CryptoSwift/Rabbit.swift; sourceTree = "<group>"; };
+		A4752C0C0C709634A51D4961871B2E9E /* PKCS7.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7.swift; path = Sources/CryptoSwift/PKCS/PKCS7.swift; sourceTree = "<group>"; };
+		A50793183C79B4FF6F4D00A1F9C016A0 /* CipherModeWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CipherModeWorker.swift; path = Sources/CryptoSwift/BlockMode/CipherModeWorker.swift; sourceTree = "<group>"; };
+		A6DB96A95741990957FB40B8299D4D3D /* Cryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptor.swift; path = Sources/CryptoSwift/Cryptor.swift; sourceTree = "<group>"; };
+		ABC0342D20C6B6D5137CF43DFEA0197C /* AEAD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEAD.swift; path = Sources/CryptoSwift/AEAD/AEAD.swift; sourceTree = "<group>"; };
+		AC124BB4EE99B37D533812A3199BCC38 /* Pods-CruxPay_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CruxPay_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		AD1041DE9BF8F09CFD0B4EDD3F44F478 /* promiseDeps.js */ = {isa = PBXFileReference; includeInIndex = 1; name = promiseDeps.js; path = CruxPay/Assets/promiseDeps.js; sourceTree = "<group>"; };
+		AD330339BFBBCC2B7CAEADB188D962B7 /* Blowfish.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blowfish.swift; path = Sources/CryptoSwift/Blowfish.swift; sourceTree = "<group>"; };
+		AD737797B74F2C42018A4A581E45F5CD /* CMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CMAC.swift; path = Sources/CryptoSwift/CMAC.swift; sourceTree = "<group>"; };
+		AF810CE751D6C2F7ACB645306DA6AC56 /* PBKDF2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF2.swift; path = Sources/CryptoSwift/PKCS/PBKDF2.swift; sourceTree = "<group>"; };
+		B0AA23537F7CCE494F326520C02421C3 /* Pods-CruxPay_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CruxPay_Tests-umbrella.h"; sourceTree = "<group>"; };
+		B0C9DE8A565EC37C667EB1A48518EFA4 /* Utils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Sources/CryptoSwift/Utils.swift; sourceTree = "<group>"; };
+		B30CC15F9DF0D46C94F24AF1F77C55CC /* Blowfish+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Blowfish+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Blowfish+Foundation.swift"; sourceTree = "<group>"; };
+		B6C3558C2869B49485FA6CC23942CD42 /* CruxJSBridge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CruxJSBridge.swift; path = CruxPay/Classes/CruxJSBridge.swift; sourceTree = "<group>"; };
+		B76B539D2B91425F32EC88B55FF1D68B /* JavaScriptNetworking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JavaScriptNetworking.swift; path = CruxPay/Classes/JavaScriptNetworking.swift; sourceTree = "<group>"; };
+		BB1F00206101BB3E5018E1D61D85AC8D /* HMAC+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HMAC+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/HMAC+Foundation.swift"; sourceTree = "<group>"; };
+		BDFB85B342F13C953F5FEDE3511CE488 /* HKDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKDF.swift; path = Sources/CryptoSwift/HKDF.swift; sourceTree = "<group>"; };
+		BFA35E39CC620C5B19D236C2AC1C94C7 /* Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptors.swift; path = Sources/CryptoSwift/Cryptors.swift; sourceTree = "<group>"; };
+		C5F88A386D7C42013AAD51284842D3AF /* BlockCipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockCipher.swift; path = Sources/CryptoSwift/BlockCipher.swift; sourceTree = "<group>"; };
+		CC70E0B342C1E41C38450E04D3FF4C2E /* CryptoSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CryptoSwift-Info.plist"; sourceTree = "<group>"; };
+		CC9601FA35C57774D5843AA20AFF52C8 /* ChaCha20+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ChaCha20+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/ChaCha20+Foundation.swift"; sourceTree = "<group>"; };
+		CD42A2E1597AD4EF3AD546588008533D /* Pods-CruxPay_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CruxPay_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D08955E651CF735EA20FB62FE617291A /* CryptoSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CryptoSwift.modulemap; sourceTree = "<group>"; };
+		D13E69599DEC37AF4E5118DF1EA0A51E /* cruxpay.js */ = {isa = PBXFileReference; includeInIndex = 1; name = cruxpay.js; path = CruxPay/Assets/cruxpay.js; sourceTree = "<group>"; };
+		D27F77414ACC3955CDCE33751684215B /* Checksum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Checksum.swift; path = Sources/CryptoSwift/Checksum.swift; sourceTree = "<group>"; };
+		D77C74206827D4F5CE2E4D281A466367 /* GCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCM.swift; path = Sources/CryptoSwift/BlockMode/GCM.swift; sourceTree = "<group>"; };
+		DB1E1E3353C89AA1F7BECFFC36FA25D8 /* AES.Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AES.Cryptors.swift; path = Sources/CryptoSwift/AES.Cryptors.swift; sourceTree = "<group>"; };
+		DC1DFC1F8576E393FFA8AC98D898E199 /* RandomBytesSequence.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RandomBytesSequence.swift; path = Sources/CryptoSwift/RandomBytesSequence.swift; sourceTree = "<group>"; };
+		DE06C528BFEAE88FD77748FAC63E56F2 /* CompactMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompactMap.swift; path = Sources/CryptoSwift/CompactMap.swift; sourceTree = "<group>"; };
+		DE93CA584CDFADA55673FF7894A1FF98 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		DEA703C1CD3E93C39C8592829B197E71 /* UInt64+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt64+Extension.swift"; path = "Sources/CryptoSwift/UInt64+Extension.swift"; sourceTree = "<group>"; };
+		E00E1E6D9A1AA963BDA8DE433487E791 /* Scrypt.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Scrypt.swift; path = Sources/CryptoSwift/Scrypt.swift; sourceTree = "<group>"; };
+		E10E16599FB35BD2BF5327BB143EEF24 /* OFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OFB.swift; path = Sources/CryptoSwift/BlockMode/OFB.swift; sourceTree = "<group>"; };
+		E380CA8E93F42F0DB8ECA36239EB9573 /* UInt16+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt16+Extension.swift"; path = "Sources/CryptoSwift/UInt16+Extension.swift"; sourceTree = "<group>"; };
+		E4300FB78BD7FD6311E25B5BDCF14C9F /* StreamEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamEncryptor.swift; path = Sources/CryptoSwift/StreamEncryptor.swift; sourceTree = "<group>"; };
+		F144081AF867B03D108C79CD4BF32BBD /* UInt32+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt32+Extension.swift"; path = "Sources/CryptoSwift/UInt32+Extension.swift"; sourceTree = "<group>"; };
+		F1FE711F97BEA58DA35911B3525E6D02 /* Pods_CruxPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CruxPay_Tests.framework; path = "Pods-CruxPay_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F46C64BB1EBDD411709126350C3EA7A4 /* CruxPay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CruxPay.xcconfig; sourceTree = "<group>"; };
+		F4CB151BC0F0328143362944FE7AD5DF /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/CryptoSwift/HMAC.swift; sourceTree = "<group>"; };
+		F69F06CFD0088CA07115E583ECCCBEA1 /* JavaScriptInterval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JavaScriptInterval.swift; path = CruxPay/Classes/JavaScriptInterval.swift; sourceTree = "<group>"; };
+		F6B7287CD37AB3276F9DAEC59DBDAA1C /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA1.swift; path = Sources/CryptoSwift/SHA1.swift; sourceTree = "<group>"; };
+		F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptoSwift.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2F1A8F355410C122D96451C2326F32 /* BlockModeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockModeOptions.swift; path = Sources/CryptoSwift/BlockMode/BlockModeOptions.swift; sourceTree = "<group>"; };
+		FE8763CDD1BC9163E421A224599F62E2 /* DataTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTypes.swift; path = CruxPay/Classes/DataTypes.swift; sourceTree = "<group>"; };
+		FF5F2E7800B186E1D8BD4F3792F48C33 /* SecureBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureBytes.swift; path = Sources/CryptoSwift/SecureBytes.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		049822362E3E49DCA2CB0984BFA84096 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				42B7AB27BF6818BB0FB0D38C82992736 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		26E363F2CCE023D30317B54AF8DBB845 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A6C536EB8D22738363875B9B51BD39F2 /* CryptoSwift.framework in Frameworks */,
+				97C4A2BB2E09670F423EB33EEB1C2DA3 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		78109D2F2E8BA3FC12A117EB59225776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D1611F60BA46C7F26EE0105D08867D62 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAC7838B0713EC5733488DDBA8CCB1B6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1A824D2FF47D6056DC8AD253482BB55B /* CryptoSwift */ = {
+			isa = PBXGroup;
+			children = (
+				ABC0342D20C6B6D5137CF43DFEA0197C /* AEAD.swift */,
+				1EEEEEF072035E0779A35C024A5AF892 /* AEADChaCha20Poly1305.swift */,
+				4E60D46E2EC3F0119899DF723AD2F9ED /* AES.swift */,
+				5BA7CD7136E34683DFFFDDA4BAA4FCB2 /* AES+Foundation.swift */,
+				DB1E1E3353C89AA1F7BECFFC36FA25D8 /* AES.Cryptors.swift */,
+				5D7EEA1342EBAA3F849102B3D01C9323 /* Array+Extension.swift */,
+				96B1EB4BB2C165DF2D8160937683144E /* Array+Foundation.swift */,
+				63A07487DB1BBE4DA2245FEC9B58A05A /* Authenticator.swift */,
+				450FA434695AB96AC54730F51D9E1298 /* BatchedCollection.swift */,
+				1F77DFB91F45364609EA8FD67AEC180A /* Bit.swift */,
+				C5F88A386D7C42013AAD51284842D3AF /* BlockCipher.swift */,
+				43B6DA1BAA7717E2354BAB3EF8CE2122 /* BlockDecryptor.swift */,
+				90328E5F61B08E3686E5F008508F21BE /* BlockEncryptor.swift */,
+				621DC0B135EE579DC5B4A5AADD3DEB69 /* BlockMode.swift */,
+				FB2F1A8F355410C122D96451C2326F32 /* BlockModeOptions.swift */,
+				AD330339BFBBCC2B7CAEADB188D962B7 /* Blowfish.swift */,
+				B30CC15F9DF0D46C94F24AF1F77C55CC /* Blowfish+Foundation.swift */,
+				60E1D326A985689A09E698CD8F99E8B9 /* CBC.swift */,
+				0EE549C9C07EBBE77E90FE71EDED6841 /* CBCMAC.swift */,
+				45F0080E3390F3817F6118755AEDAF13 /* CCM.swift */,
+				3D927BB31BCE09435AE6868B0BB22F7E /* CFB.swift */,
+				7548D4AB14ABF9C460E569B73C9E0898 /* ChaCha20.swift */,
+				CC9601FA35C57774D5843AA20AFF52C8 /* ChaCha20+Foundation.swift */,
+				D27F77414ACC3955CDCE33751684215B /* Checksum.swift */,
+				41EBDD1B36A94B106D3179DD0C70D51C /* Cipher.swift */,
+				A50793183C79B4FF6F4D00A1F9C016A0 /* CipherModeWorker.swift */,
+				AD737797B74F2C42018A4A581E45F5CD /* CMAC.swift */,
+				A004C44DEB901928C755E67ADEAC75D2 /* Collection+Extension.swift */,
+				DE06C528BFEAE88FD77748FAC63E56F2 /* CompactMap.swift */,
+				A6DB96A95741990957FB40B8299D4D3D /* Cryptor.swift */,
+				BFA35E39CC620C5B19D236C2AC1C94C7 /* Cryptors.swift */,
+				7DF356E3B441720CF79357F21CA2187F /* CTR.swift */,
+				453A0533BD070EDD37550B10A283DF04 /* Data+Extension.swift */,
+				86CCB8C1D47991860D5C7DF5C19CA485 /* Digest.swift */,
+				79AC5F76E71173073A70D32C0CF5BD39 /* DigestType.swift */,
+				A1756350FA057317994FF9AD9DFA52B7 /* ECB.swift */,
+				D77C74206827D4F5CE2E4D281A466367 /* GCM.swift */,
+				652E75D8184B35AE2914221EEA22632B /* Generics.swift */,
+				BDFB85B342F13C953F5FEDE3511CE488 /* HKDF.swift */,
+				F4CB151BC0F0328143362944FE7AD5DF /* HMAC.swift */,
+				BB1F00206101BB3E5018E1D61D85AC8D /* HMAC+Foundation.swift */,
+				848DE8B2DF84C73980BC09C0A8BF9408 /* Int+Extension.swift */,
+				3278F0698A5F5D0A60B8F30973223B37 /* MD5.swift */,
+				6917E6B98C8971E97928D639BCAB62CC /* NoPadding.swift */,
+				E10E16599FB35BD2BF5327BB143EEF24 /* OFB.swift */,
+				40A10B0038024A558D0139470D18C249 /* Operators.swift */,
+				6BC1FAA89559F5F9B556581D010106AD /* Padding.swift */,
+				0FB00EF8C4A6C9BA92060A96FC0E407C /* PBKDF1.swift */,
+				AF810CE751D6C2F7ACB645306DA6AC56 /* PBKDF2.swift */,
+				7C6BE7455675795CE8B88101BBD3DB30 /* PCBC.swift */,
+				994E2484D767F54B4DEAD58333A47F61 /* PKCS5.swift */,
+				A4752C0C0C709634A51D4961871B2E9E /* PKCS7.swift */,
+				8E479620B733F9C961C139BBB3FE3C42 /* PKCS7Padding.swift */,
+				0CFB20EBC69A29677D4BB35F953160E8 /* Poly1305.swift */,
+				A434943AF00A0746E68B268C3DDF9FD6 /* Rabbit.swift */,
+				6CBAD25CC6834BAD0CD253AA8D5FF7FB /* Rabbit+Foundation.swift */,
+				DC1DFC1F8576E393FFA8AC98D898E199 /* RandomBytesSequence.swift */,
+				E00E1E6D9A1AA963BDA8DE433487E791 /* Scrypt.swift */,
+				FF5F2E7800B186E1D8BD4F3792F48C33 /* SecureBytes.swift */,
+				F6B7287CD37AB3276F9DAEC59DBDAA1C /* SHA1.swift */,
+				805918CA299172DB07644AB587436A2F /* SHA2.swift */,
+				5154CE379135727EE9561F93F8BEE758 /* SHA3.swift */,
+				57BD270254CC425FC15F201C2C01177C /* StreamDecryptor.swift */,
+				E4300FB78BD7FD6311E25B5BDCF14C9F /* StreamEncryptor.swift */,
+				8B7FD5E01907013A26BDD3F3BC2D0200 /* String+Extension.swift */,
+				6D8C8F41A74BECBEE5FE909DA636E935 /* String+FoundationExtension.swift */,
+				3914AD97ED2CAE3345300903F0A021A6 /* UInt128.swift */,
+				E380CA8E93F42F0DB8ECA36239EB9573 /* UInt16+Extension.swift */,
+				F144081AF867B03D108C79CD4BF32BBD /* UInt32+Extension.swift */,
+				DEA703C1CD3E93C39C8592829B197E71 /* UInt64+Extension.swift */,
+				44B7CCE3A12746451F8002437B5B5EA9 /* UInt8+Extension.swift */,
+				15E452AA6BB4B89E782114060D8D53CB /* Updatable.swift */,
+				B0C9DE8A565EC37C667EB1A48518EFA4 /* Utils.swift */,
+				6DA78951C2C0E9E14DD648D7F5279CB9 /* Utils+Foundation.swift */,
+				9F17C75B36F8555C56FFFA776055CE65 /* ZeroPadding.swift */,
+				449970A21A79FA2A215A8E352CEDEA9B /* Support Files */,
+			);
+			name = CryptoSwift;
+			path = CryptoSwift;
+			sourceTree = "<group>";
+		};
+		3C204911783B81458CEC2C93EDB0995E /* Pod */ = {
+			isa = PBXGroup;
+			children = (
+				A017FFB5912DD26F49E0DF5CDD3A5AF2 /* CruxPay.podspec */,
+				9544FC5F8C243A544BED571DC0CB7D53 /* LICENSE */,
+				A2A0E1A2C839D991CFAD3FF45BBE98EC /* README.md */,
+			);
+			name = Pod;
+			sourceTree = "<group>";
+		};
+		449970A21A79FA2A215A8E352CEDEA9B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				D08955E651CF735EA20FB62FE617291A /* CryptoSwift.modulemap */,
+				7FDC70BD406FCF9ED6E97D66E33D535F /* CryptoSwift.xcconfig */,
+				882C7924A9F74C741EB56E37808E89EF /* CryptoSwift-dummy.m */,
+				CC70E0B342C1E41C38450E04D3FF4C2E /* CryptoSwift-Info.plist */,
+				520398A453F7EEC9D4E001916D79354A /* CryptoSwift-prefix.pch */,
+				54875B1E096AA54CA6D00250734682FF /* CryptoSwift-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/CryptoSwift";
+			sourceTree = "<group>";
+		};
+		722F8B9BEDF9F8C948F41AF479EFC536 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D13E69599DEC37AF4E5118DF1EA0A51E /* cruxpay.js */,
+				AD1041DE9BF8F09CFD0B4EDD3F44F478 /* promiseDeps.js */,
+				2F0A2DECC105BB102D7A83AB2607A485 /* requestDeps.js */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		770AEC785827E3F021EF951CE60B6CBA /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8C59F65DE4BF7F5939FE5DC67FC2EBCF /* Pods-CruxPay_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		884948DED869EA1856D8A9246A996F10 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD6F33F29233D82A8862FD5BC7497182 /* CruxPay */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		8C59F65DE4BF7F5939FE5DC67FC2EBCF /* Pods-CruxPay_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8048147B6ED5012E65422AEAB3A1216A /* Pods-CruxPay_Tests.modulemap */,
+				99FEB348A1CDD57F46ACDCE1DD5C744D /* Pods-CruxPay_Tests-acknowledgements.markdown */,
+				CD42A2E1597AD4EF3AD546588008533D /* Pods-CruxPay_Tests-acknowledgements.plist */,
+				0C0D4332D1AD84C4D0BE80ADC803B76D /* Pods-CruxPay_Tests-dummy.m */,
+				AC124BB4EE99B37D533812A3199BCC38 /* Pods-CruxPay_Tests-frameworks.sh */,
+				47A85BB6C9575B273369313D2D11F96E /* Pods-CruxPay_Tests-Info.plist */,
+				B0AA23537F7CCE494F326520C02421C3 /* Pods-CruxPay_Tests-umbrella.h */,
+				60A585F3D7D8A1E550B02E72682C0824 /* Pods-CruxPay_Tests.debug.xcconfig */,
+				2C9F4AC947A6711BDFB34606D238CD76 /* Pods-CruxPay_Tests.release.xcconfig */,
+			);
+			name = "Pods-CruxPay_Tests";
+			path = "Target Support Files/Pods-CruxPay_Tests";
+			sourceTree = "<group>";
+		};
+		8E6AFFDD9E3C3EA0E63A4F24EC449496 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1647A3B4829947F02371B9FA5614F4E5 /* CryptoSwift.framework */,
+				A96B29886D54A73F76BF48BC308C52B7 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A790404FDAB8D1AB6CA91253BBCEF2C /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				655A7847FF6226E5ADF4115C7982732C /* CruxPay.modulemap */,
+				F46C64BB1EBDD411709126350C3EA7A4 /* CruxPay.xcconfig */,
+				5659D711FF8F0A4787B3CB3F487F38C2 /* CruxPay-dummy.m */,
+				8EE1873195E99E033BC47BD0AD540353 /* CruxPay-Info.plist */,
+				4D57688A3DA9DD807100D9389004ED81 /* CruxPay-prefix.pch */,
+				45A219C2108D9A55D5AEBF83D8C8186D /* CruxPay-umbrella.h */,
+				494CCDBCAA99CFE3E6243C06B1EA3803 /* ResourceBundle-CruxPay-CruxPay-Info.plist */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/CruxPay";
+			sourceTree = "<group>";
+		};
+		9AB0C66931A2D0E61A5C0EB4D446CF8C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1A824D2FF47D6056DC8AD253482BB55B /* CryptoSwift */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A96B29886D54A73F76BF48BC308C52B7 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DE93CA584CDFADA55673FF7894A1FF98 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				884948DED869EA1856D8A9246A996F10 /* Development Pods */,
+				8E6AFFDD9E3C3EA0E63A4F24EC449496 /* Frameworks */,
+				9AB0C66931A2D0E61A5C0EB4D446CF8C /* Pods */,
+				CF545D4C959AA6A5496AA40166D068D5 /* Products */,
+				770AEC785827E3F021EF951CE60B6CBA /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		CF545D4C959AA6A5496AA40166D068D5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				197FCE59488A43D413E46F2033183D94 /* CruxPay.bundle */,
+				41D4713415974BC20AC4D7A4A659B542 /* CruxPay.framework */,
+				F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift.framework */,
+				F1FE711F97BEA58DA35911B3525E6D02 /* Pods_CruxPay_Tests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DD6F33F29233D82A8862FD5BC7497182 /* CruxPay */ = {
+			isa = PBXGroup;
+			children = (
+				18B5CE5BF70DCCBEF789DB88546FA854 /* CruxClient.swift */,
+				B6C3558C2869B49485FA6CC23942CD42 /* CruxJSBridge.swift */,
+				FE8763CDD1BC9163E421A224599F62E2 /* DataTypes.swift */,
+				F69F06CFD0088CA07115E583ECCCBEA1 /* JavaScriptInterval.swift */,
+				B76B539D2B91425F32EC88B55FF1D68B /* JavaScriptNetworking.swift */,
+				3C204911783B81458CEC2C93EDB0995E /* Pod */,
+				722F8B9BEDF9F8C948F41AF479EFC536 /* Resources */,
+				9A790404FDAB8D1AB6CA91253BBCEF2C /* Support Files */,
+			);
+			name = CruxPay;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		947C14316082E532DC4F046C38FADD29 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E39DD7D2A584E86C476F2B4CA18BB4B4 /* Pods-CruxPay_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AC5239466064B0A96D2AB3926459C3D8 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58D7FDEF5F8C44155D8C73FCE6336241 /* CruxPay-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FF4F3CC4A4E4340DB94EF3DC9B4FE81C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8EC99D91FF4C468F040921459936950 /* CryptoSwift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2141A0C8669CBF1003A63DBF2BF3F2FC /* CruxPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A87BBD02CC4542ABD16813E8E4CB4078 /* Build configuration list for PBXNativeTarget "CruxPay" */;
+			buildPhases = (
+				AC5239466064B0A96D2AB3926459C3D8 /* Headers */,
+				853636CC7C9D8F09F092AEDCE526D4A5 /* Sources */,
+				26E363F2CCE023D30317B54AF8DBB845 /* Frameworks */,
+				F0E1B9E2DB60EEC9AA06328DACB792D6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B56623E64F28EB6E0684ACE7EA9A4596 /* PBXTargetDependency */,
+				F241610D552829799BE8A5D14B588955 /* PBXTargetDependency */,
+			);
+			name = CruxPay;
+			productName = CruxPay;
+			productReference = 41D4713415974BC20AC4D7A4A659B542 /* CruxPay.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4DACC8205BA570FABCA50D87735B96C7 /* CruxPay-CruxPay */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6C407B2D800C3C770FC70A835AFB87B5 /* Build configuration list for PBXNativeTarget "CruxPay-CruxPay" */;
+			buildPhases = (
+				1BD3DC8F05299DEF866C9C8787D023A0 /* Sources */,
+				DAC7838B0713EC5733488DDBA8CCB1B6 /* Frameworks */,
+				E43C78C6BE85F5124B330AF4C1D3AEF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "CruxPay-CruxPay";
+			productName = "CruxPay-CruxPay";
+			productReference = 197FCE59488A43D413E46F2033183D94 /* CruxPay.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 481085B8AC4E6E805830B1659A9D7EAD /* Build configuration list for PBXNativeTarget "CryptoSwift" */;
+			buildPhases = (
+				FF4F3CC4A4E4340DB94EF3DC9B4FE81C /* Headers */,
+				E8C400DE558283E1FB5A59AB97914810 /* Sources */,
+				78109D2F2E8BA3FC12A117EB59225776 /* Frameworks */,
+				AA2F9396B43FADAE30CA08E71820C9FD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CryptoSwift;
+			productName = CryptoSwift;
+			productReference = F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DEBD6B0FC812075C8A194642F99BBC1E /* Pods-CruxPay_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 62D314FB19C6EE81DC84D153860F1708 /* Build configuration list for PBXNativeTarget "Pods-CruxPay_Tests" */;
+			buildPhases = (
+				947C14316082E532DC4F046C38FADD29 /* Headers */,
+				036B8DD2F5BFDB8EB40D5771B2AB3E02 /* Sources */,
+				049822362E3E49DCA2CB0984BFA84096 /* Frameworks */,
+				A7B232C2A3A6A09CCBF5452516DB4126 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C033194C7D1324F085DE2E136300C391 /* PBXTargetDependency */,
+				9884D6299B07F0D67DD2530E0261C77E /* PBXTargetDependency */,
+			);
+			name = "Pods-CruxPay_Tests";
+			productName = "Pods-CruxPay_Tests";
+			productReference = F1FE711F97BEA58DA35911B3525E6D02 /* Pods_CruxPay_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = CF545D4C959AA6A5496AA40166D068D5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2141A0C8669CBF1003A63DBF2BF3F2FC /* CruxPay */,
+				4DACC8205BA570FABCA50D87735B96C7 /* CruxPay-CruxPay */,
+				99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */,
+				DEBD6B0FC812075C8A194642F99BBC1E /* Pods-CruxPay_Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A7B232C2A3A6A09CCBF5452516DB4126 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA2F9396B43FADAE30CA08E71820C9FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E43C78C6BE85F5124B330AF4C1D3AEF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C980876375204BB5D9BFC5A4EEE9DB9 /* cruxpay.js in Resources */,
+				EDC425FF03422546E4DF84F6E5A040A7 /* promiseDeps.js in Resources */,
+				6DCC3D8FF23BE48F5715322871FDA920 /* requestDeps.js in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F0E1B9E2DB60EEC9AA06328DACB792D6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3BDBE002A76624722F2AE39A4F78923A /* CruxPay.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		036B8DD2F5BFDB8EB40D5771B2AB3E02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A91154B8378B9093E449208BDC9A9D13 /* Pods-CruxPay_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1BD3DC8F05299DEF866C9C8787D023A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		853636CC7C9D8F09F092AEDCE526D4A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89C521448B402B71792118E1F8437889 /* CruxClient.swift in Sources */,
+				E1757179DC940E69C46BFED2CE2A14F0 /* CruxJSBridge.swift in Sources */,
+				BEA8EECB7290F00B9B21B3CCF9E0EF42 /* CruxPay-dummy.m in Sources */,
+				CECE150789ABE39F37E60392868CE6D7 /* DataTypes.swift in Sources */,
+				289E64C43B7415979E74CCDC7CBDE655 /* JavaScriptInterval.swift in Sources */,
+				4CAC8D58DF45D68CD95D8F99EA08C2A0 /* JavaScriptNetworking.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E8C400DE558283E1FB5A59AB97914810 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F5C96D4AE99E50B3D6159F11CBBCF0C /* AEAD.swift in Sources */,
+				064B33674073204A215E919067613233 /* AEADChaCha20Poly1305.swift in Sources */,
+				287871D47B2EDD929C937487509419D4 /* AES+Foundation.swift in Sources */,
+				6EB54A5590D922011DA3E281EC903579 /* AES.Cryptors.swift in Sources */,
+				0DC78BCB408E396FBDD59E7AEAB202C3 /* AES.swift in Sources */,
+				DA852B5EA2B59CFB71FF18FEA85DDB5A /* Array+Extension.swift in Sources */,
+				B9C11D1C8D73C793C4433740C3BEC361 /* Array+Foundation.swift in Sources */,
+				0AE7284DD616104779E37DD61641FD05 /* Authenticator.swift in Sources */,
+				088F750A7008CAE6F06D30C02BCAD730 /* BatchedCollection.swift in Sources */,
+				55A6065AC0101E6F615CC3F01DD01503 /* Bit.swift in Sources */,
+				AF84754000F820BF4976D1C20D34F512 /* BlockCipher.swift in Sources */,
+				1C522F569D548F931E105325E5724405 /* BlockDecryptor.swift in Sources */,
+				DFCCDE3C721A5417EC4742D4833F506B /* BlockEncryptor.swift in Sources */,
+				FAD6D12C31DD154067A754E506A88A0C /* BlockMode.swift in Sources */,
+				F49272C9422A3805C4CCA028E0762ABA /* BlockModeOptions.swift in Sources */,
+				FE1C2B55B4529B80E028D7E092556EC4 /* Blowfish+Foundation.swift in Sources */,
+				F3E59286DD8A37197D12F323546529B7 /* Blowfish.swift in Sources */,
+				161EE02BA60521CC481285B3D3838951 /* CBC.swift in Sources */,
+				0FD8BC574710FF5F29EAB0DD98148FA8 /* CBCMAC.swift in Sources */,
+				C31A555E2D25D1D3C49C86B420C9C890 /* CCM.swift in Sources */,
+				19EDBBD81BCDF746E3505B652D05890C /* CFB.swift in Sources */,
+				765E952682F7363A71EDAD9D794C663F /* ChaCha20+Foundation.swift in Sources */,
+				8050BF3B39EAB2B3436BA9C5DABEBC9E /* ChaCha20.swift in Sources */,
+				EA010C563B85D20D3A7202327893CA2B /* Checksum.swift in Sources */,
+				8354F70045FC9C8E60063D2F05BC224F /* Cipher.swift in Sources */,
+				F55DFA22C03B34D2722505677E2FE57B /* CipherModeWorker.swift in Sources */,
+				502D88FD791758994F657FF288835C96 /* CMAC.swift in Sources */,
+				5185B6D0B0D0AE245D83FF6143FE2DD2 /* Collection+Extension.swift in Sources */,
+				4C57434CA54F84A0A4C80510175C97B8 /* CompactMap.swift in Sources */,
+				D36B7F49DB3E740EB97CB4F751052318 /* Cryptor.swift in Sources */,
+				D1B1C214C9C07DEE6AF2BA160BD41AE6 /* Cryptors.swift in Sources */,
+				43804FD403922EE3955F9B48D649CFD3 /* CryptoSwift-dummy.m in Sources */,
+				1F2A128640740BE3ABE24ABC31311ECC /* CTR.swift in Sources */,
+				3F03B8C2730BCCDAB7383746BA5DBBA1 /* Data+Extension.swift in Sources */,
+				CA7DCE722E56A1C06C58EEFDD8CD4189 /* Digest.swift in Sources */,
+				C1B93DBE35DCEE9CA02D3524524A2FC1 /* DigestType.swift in Sources */,
+				6505B8D4052BA21267EBDD364001BE85 /* ECB.swift in Sources */,
+				695C01379BFEE2A30C6313C279E56AF7 /* GCM.swift in Sources */,
+				CDC4D75A54359889670928C811A9ABD4 /* Generics.swift in Sources */,
+				B71BBC76E620B35D85CD9EAADE692F21 /* HKDF.swift in Sources */,
+				32279D19141EF38CD4A6FC14BBA56A2F /* HMAC+Foundation.swift in Sources */,
+				52CBB876898ECC1AD55F832EB8930FBB /* HMAC.swift in Sources */,
+				F59F777DC5CE77FD88AE4428653BC2BD /* Int+Extension.swift in Sources */,
+				F21D921F4C482E29AE6FED8FE0A10CCD /* MD5.swift in Sources */,
+				B10F8F492FC1C1A19219465C8E14DBA7 /* NoPadding.swift in Sources */,
+				2A87B81745F2DA7F3511E295C6221844 /* OFB.swift in Sources */,
+				927ED2DE62DA8F7DC881D7AC1DFDC89A /* Operators.swift in Sources */,
+				7D4895D0BE686F53585FAAB87A68DBDC /* Padding.swift in Sources */,
+				819DECF5255B8A88628965C63DB07BD7 /* PBKDF1.swift in Sources */,
+				79AC4E39CA4F4114167EC74F33DD31F3 /* PBKDF2.swift in Sources */,
+				7F52F3CAD1DF285F4F31C4525F90F832 /* PCBC.swift in Sources */,
+				068E8D771AA3573A965B8AE15246B212 /* PKCS5.swift in Sources */,
+				C47F0CECFAA4675B2C3ED06E489A9C60 /* PKCS7.swift in Sources */,
+				9396A9E2DEAC7C44753E856BB093F861 /* PKCS7Padding.swift in Sources */,
+				7FB21491FFA16A409EA76050F08258F8 /* Poly1305.swift in Sources */,
+				36AAC68E2E2ED0C90FFB181605870ACB /* Rabbit+Foundation.swift in Sources */,
+				BD53009205625CFE4DE761FC9CAB6BCD /* Rabbit.swift in Sources */,
+				A3BB076DECFC8393628BD07F3C16A736 /* RandomBytesSequence.swift in Sources */,
+				C692C0EEE42564C6E578BEA1787C4175 /* Scrypt.swift in Sources */,
+				7C76A9E9E4F84BD21A8661A0CF6E174A /* SecureBytes.swift in Sources */,
+				3F255283D0092945577F9D2EDB350819 /* SHA1.swift in Sources */,
+				745F22D6BF6635B170AE51C7E4C1E30D /* SHA2.swift in Sources */,
+				286A2CB42669E479090B6FD23AE9D60A /* SHA3.swift in Sources */,
+				2E2637FB267B5C6B4F73A97FBF5DFDC2 /* StreamDecryptor.swift in Sources */,
+				FEE58BD2D7317EC600B0B2202F45E2B5 /* StreamEncryptor.swift in Sources */,
+				D067A308A26E2147D26E9A90FE5AC6C5 /* String+Extension.swift in Sources */,
+				372693AE54BF65E63D5736ED49E8BE63 /* String+FoundationExtension.swift in Sources */,
+				18D9499DDE3BF4CD2AAE07F85DEE22B2 /* UInt128.swift in Sources */,
+				037FA290784A8BB9BE5BD93EBE8925FC /* UInt16+Extension.swift in Sources */,
+				AE10BB53BE6B2822137FC6EA78BBBFD3 /* UInt32+Extension.swift in Sources */,
+				F72887BA0E6830EBAFEB5DB24B5B97BD /* UInt64+Extension.swift in Sources */,
+				0CDDEC244D717907CCD2A23A8FDB8D52 /* UInt8+Extension.swift in Sources */,
+				5AA3672882AB2A912496217D3DBF97C7 /* Updatable.swift in Sources */,
+				A9A5442A8D421B89B8FB77D43B0E7AF5 /* Utils+Foundation.swift in Sources */,
+				B40A771D1866231A00013B2018AEA607 /* Utils.swift in Sources */,
+				71BC8BD7F95BC4F78C25A6A7D9DD577C /* ZeroPadding.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9884D6299B07F0D67DD2530E0261C77E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
+			targetProxy = 66D3244FE6E937A638F191BAB692BFD9 /* PBXContainerItemProxy */;
+		};
+		B56623E64F28EB6E0684ACE7EA9A4596 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "CruxPay-CruxPay";
+			target = 4DACC8205BA570FABCA50D87735B96C7 /* CruxPay-CruxPay */;
+			targetProxy = F410ADBC30D66F0B65E42FE3AADD2831 /* PBXContainerItemProxy */;
+		};
+		C033194C7D1324F085DE2E136300C391 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CruxPay;
+			target = 2141A0C8669CBF1003A63DBF2BF3F2FC /* CruxPay */;
+			targetProxy = C19EEB81FC1D6C25E94E1E4E54E56CB8 /* PBXContainerItemProxy */;
+		};
+		F241610D552829799BE8A5D14B588955 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = CryptoSwift;
+			target = 99313990C1D76A6D1D017868B6975CC8 /* CryptoSwift */;
+			targetProxy = DE936764E2E2B7724FCE4AD0D9FF97EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0189CD123DDB04D903A57D93C1F5E065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F46C64BB1EBDD411709126350C3EA7A4 /* CruxPay.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CruxPay/CruxPay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CruxPay/CruxPay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CruxPay/CruxPay.modulemap";
+				PRODUCT_MODULE_NAME = CruxPay;
+				PRODUCT_NAME = CruxPay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		2D57138D7EFEC36C0D8DC58CB658466D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		4BC8C568E3B7EA2D50080D1CA46A91BD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F46C64BB1EBDD411709126350C3EA7A4 /* CruxPay.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CruxPay";
+				IBSC_MODULE = CruxPay;
+				INFOPLIST_FILE = "Target Support Files/CruxPay/ResourceBundle-CruxPay-CruxPay-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = CruxPay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		4FB404B6702CF57080EE1647188668EE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FDC70BD406FCF9ED6E97D66E33D535F /* CryptoSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoSwift/CryptoSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CryptoSwift/CryptoSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CryptoSwift/CryptoSwift.modulemap";
+				PRODUCT_MODULE_NAME = CryptoSwift;
+				PRODUCT_NAME = CryptoSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		67DD5CEFFC264660BEC51431C663D2CB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C9F4AC947A6711BDFB34606D238CD76 /* Pods-CruxPay_Tests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CruxPay_Tests/Pods-CruxPay_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CruxPay_Tests/Pods-CruxPay_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		8568063BB2C0513099AB1534B0E98030 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F46C64BB1EBDD411709126350C3EA7A4 /* CruxPay.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/CruxPay";
+				IBSC_MODULE = CruxPay;
+				INFOPLIST_FILE = "Target Support Files/CruxPay/ResourceBundle-CruxPay-CruxPay-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				PRODUCT_NAME = CruxPay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		86124AB57E6E490D2C47A86F0A5BAF7D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9474A1AF08E4E1BE5C17A12B7F5CB995 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7FDC70BD406FCF9ED6E97D66E33D535F /* CryptoSwift.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CryptoSwift/CryptoSwift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CryptoSwift/CryptoSwift-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CryptoSwift/CryptoSwift.modulemap";
+				PRODUCT_MODULE_NAME = CryptoSwift;
+				PRODUCT_NAME = CryptoSwift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D60EE4BF5CB104F2C47494CED6423FE5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F46C64BB1EBDD411709126350C3EA7A4 /* CruxPay.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/CruxPay/CruxPay-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/CruxPay/CruxPay-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/CruxPay/CruxPay.modulemap";
+				PRODUCT_MODULE_NAME = CruxPay;
+				PRODUCT_NAME = CruxPay;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DCD97561B6FCFF63E0A2EC0E73B46C4E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60A585F3D7D8A1E550B02E72682C0824 /* Pods-CruxPay_Tests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CruxPay_Tests/Pods-CruxPay_Tests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CruxPay_Tests/Pods-CruxPay_Tests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		481085B8AC4E6E805830B1659A9D7EAD /* Build configuration list for PBXNativeTarget "CryptoSwift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9474A1AF08E4E1BE5C17A12B7F5CB995 /* Debug */,
+				4FB404B6702CF57080EE1647188668EE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86124AB57E6E490D2C47A86F0A5BAF7D /* Debug */,
+				2D57138D7EFEC36C0D8DC58CB658466D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		62D314FB19C6EE81DC84D153860F1708 /* Build configuration list for PBXNativeTarget "Pods-CruxPay_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DCD97561B6FCFF63E0A2EC0E73B46C4E /* Debug */,
+				67DD5CEFFC264660BEC51431C663D2CB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6C407B2D800C3C770FC70A835AFB87B5 /* Build configuration list for PBXNativeTarget "CruxPay-CruxPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8568063BB2C0513099AB1534B0E98030 /* Debug */,
+				4BC8C568E3B7EA2D50080D1CA46A91BD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A87BBD02CC4542ABD16813E8E4CB4078 /* Build configuration list for PBXNativeTarget "CruxPay" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0189CD123DDB04D903A57D93C1F5E065 /* Debug */,
+				D60EE4BF5CB104F2C47494CED6423FE5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
