@@ -7,14 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		51202FBE237E964E00721081 /* cruxpay.js in Sources */ = {isa = PBXBuildFile; fileRef = 51202FBD237E964E00721081 /* cruxpay.js */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		EAE9A64D697429EB34BE5EAB /* Pods_CruxPay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5432069F43B19FDC81C2F /* Pods_CruxPay_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		510DAE86237DA09300D24303 /* cruxpay.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = cruxpay.js; path = ../CruxPay/cruxpay.js; sourceTree = "<group>"; };
-		51202FBD237E964E00721081 /* cruxpay.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; name = cruxpay.js; path = ../Resources/cruxpay.js; sourceTree = "<group>"; };
 		592B2C1FB752886E0C698CE0 /* CruxPay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CruxPay.podspec; path = ../CruxPay.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACE51AFB9204008FA782 /* CruxPay_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CruxPay_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				510DAE86237DA09300D24303 /* cruxpay.js */,
-				51202FBD237E964E00721081 /* cruxpay.js */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -221,7 +218,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				51202FBE237E964E00721081 /* cruxpay.js in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
