@@ -12,7 +12,6 @@
 		068E8D771AA3573A965B8AE15246B212 /* PKCS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 994E2484D767F54B4DEAD58333A47F61 /* PKCS5.swift */; };
 		088F750A7008CAE6F06D30C02BCAD730 /* BatchedCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 450FA434695AB96AC54730F51D9E1298 /* BatchedCollection.swift */; };
 		0AE7284DD616104779E37DD61641FD05 /* Authenticator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63A07487DB1BBE4DA2245FEC9B58A05A /* Authenticator.swift */; };
-		0C980876375204BB5D9BFC5A4EEE9DB9 /* cruxpay.js in Resources */ = {isa = PBXBuildFile; fileRef = D13E69599DEC37AF4E5118DF1EA0A51E /* cruxpay.js */; };
 		0CDDEC244D717907CCD2A23A8FDB8D52 /* UInt8+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B7CCE3A12746451F8002437B5B5EA9 /* UInt8+Extension.swift */; };
 		0DC78BCB408E396FBDD59E7AEAB202C3 /* AES.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E60D46E2EC3F0119899DF723AD2F9ED /* AES.swift */; };
 		0FD8BC574710FF5F29EAB0DD98148FA8 /* CBCMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE549C9C07EBBE77E90FE71EDED6841 /* CBCMAC.swift */; };
@@ -142,16 +141,16 @@
 		15E452AA6BB4B89E782114060D8D53CB /* Updatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Updatable.swift; path = Sources/CryptoSwift/Updatable.swift; sourceTree = "<group>"; };
 		1647A3B4829947F02371B9FA5614F4E5 /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		18B5CE5BF70DCCBEF789DB88546FA854 /* CruxClient.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CruxClient.swift; path = CruxPay/Classes/CruxClient.swift; sourceTree = "<group>"; };
-		197FCE59488A43D413E46F2033183D94 /* CruxPay.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = CruxPay.bundle; path = "CruxPay-CruxPay.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		197FCE59488A43D413E46F2033183D94 /* CruxPay.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CruxPay.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EEEEEF072035E0779A35C024A5AF892 /* AEADChaCha20Poly1305.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEADChaCha20Poly1305.swift; path = Sources/CryptoSwift/AEAD/AEADChaCha20Poly1305.swift; sourceTree = "<group>"; };
 		1F77DFB91F45364609EA8FD67AEC180A /* Bit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Bit.swift; path = Sources/CryptoSwift/Bit.swift; sourceTree = "<group>"; };
 		2C9F4AC947A6711BDFB34606D238CD76 /* Pods-CruxPay_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CruxPay_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		2F0A2DECC105BB102D7A83AB2607A485 /* requestDeps.js */ = {isa = PBXFileReference; includeInIndex = 1; name = requestDeps.js; path = CruxPay/Assets/requestDeps.js; sourceTree = "<group>"; };
+		2F0A2DECC105BB102D7A83AB2607A485 /* requestDeps.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = requestDeps.js; path = CruxPay/Assets/requestDeps.js; sourceTree = "<group>"; };
 		3278F0698A5F5D0A60B8F30973223B37 /* MD5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MD5.swift; path = Sources/CryptoSwift/MD5.swift; sourceTree = "<group>"; };
 		3914AD97ED2CAE3345300903F0A021A6 /* UInt128.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UInt128.swift; path = Sources/CryptoSwift/UInt128.swift; sourceTree = "<group>"; };
 		3D927BB31BCE09435AE6868B0BB22F7E /* CFB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CFB.swift; path = Sources/CryptoSwift/BlockMode/CFB.swift; sourceTree = "<group>"; };
 		40A10B0038024A558D0139470D18C249 /* Operators.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Operators.swift; path = Sources/CryptoSwift/Operators.swift; sourceTree = "<group>"; };
-		41D4713415974BC20AC4D7A4A659B542 /* CruxPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CruxPay.framework; path = CruxPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		41D4713415974BC20AC4D7A4A659B542 /* CruxPay.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CruxPay.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		41EBDD1B36A94B106D3179DD0C70D51C /* Cipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cipher.swift; path = Sources/CryptoSwift/Cipher.swift; sourceTree = "<group>"; };
 		43B6DA1BAA7717E2354BAB3EF8CE2122 /* BlockDecryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockDecryptor.swift; path = Sources/CryptoSwift/BlockDecryptor.swift; sourceTree = "<group>"; };
 		44B7CCE3A12746451F8002437B5B5EA9 /* UInt8+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt8+Extension.swift"; path = "Sources/CryptoSwift/UInt8+Extension.swift"; sourceTree = "<group>"; };
@@ -195,23 +194,23 @@
 		8E479620B733F9C961C139BBB3FE3C42 /* PKCS7Padding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7Padding.swift; path = Sources/CryptoSwift/PKCS/PKCS7Padding.swift; sourceTree = "<group>"; };
 		8EE1873195E99E033BC47BD0AD540353 /* CruxPay-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CruxPay-Info.plist"; sourceTree = "<group>"; };
 		90328E5F61B08E3686E5F008508F21BE /* BlockEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockEncryptor.swift; path = Sources/CryptoSwift/BlockEncryptor.swift; sourceTree = "<group>"; };
-		9544FC5F8C243A544BED571DC0CB7D53 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		9544FC5F8C243A544BED571DC0CB7D53 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		96B1EB4BB2C165DF2D8160937683144E /* Array+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/Array+Foundation.swift"; sourceTree = "<group>"; };
 		994E2484D767F54B4DEAD58333A47F61 /* PKCS5.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS5.swift; path = Sources/CryptoSwift/PKCS/PKCS5.swift; sourceTree = "<group>"; };
 		99FEB348A1CDD57F46ACDCE1DD5C744D /* Pods-CruxPay_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CruxPay_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9F17C75B36F8555C56FFFA776055CE65 /* ZeroPadding.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ZeroPadding.swift; path = Sources/CryptoSwift/ZeroPadding.swift; sourceTree = "<group>"; };
 		A004C44DEB901928C755E67ADEAC75D2 /* Collection+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Collection+Extension.swift"; path = "Sources/CryptoSwift/Collection+Extension.swift"; sourceTree = "<group>"; };
-		A017FFB5912DD26F49E0DF5CDD3A5AF2 /* CruxPay.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = CruxPay.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A017FFB5912DD26F49E0DF5CDD3A5AF2 /* CruxPay.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; path = CruxPay.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A1756350FA057317994FF9AD9DFA52B7 /* ECB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ECB.swift; path = Sources/CryptoSwift/BlockMode/ECB.swift; sourceTree = "<group>"; };
-		A2A0E1A2C839D991CFAD3FF45BBE98EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		A2A0E1A2C839D991CFAD3FF45BBE98EC /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A434943AF00A0746E68B268C3DDF9FD6 /* Rabbit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rabbit.swift; path = Sources/CryptoSwift/Rabbit.swift; sourceTree = "<group>"; };
 		A4752C0C0C709634A51D4961871B2E9E /* PKCS7.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PKCS7.swift; path = Sources/CryptoSwift/PKCS/PKCS7.swift; sourceTree = "<group>"; };
 		A50793183C79B4FF6F4D00A1F9C016A0 /* CipherModeWorker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CipherModeWorker.swift; path = Sources/CryptoSwift/BlockMode/CipherModeWorker.swift; sourceTree = "<group>"; };
 		A6DB96A95741990957FB40B8299D4D3D /* Cryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptor.swift; path = Sources/CryptoSwift/Cryptor.swift; sourceTree = "<group>"; };
 		ABC0342D20C6B6D5137CF43DFEA0197C /* AEAD.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AEAD.swift; path = Sources/CryptoSwift/AEAD/AEAD.swift; sourceTree = "<group>"; };
 		AC124BB4EE99B37D533812A3199BCC38 /* Pods-CruxPay_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CruxPay_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		AD1041DE9BF8F09CFD0B4EDD3F44F478 /* promiseDeps.js */ = {isa = PBXFileReference; includeInIndex = 1; name = promiseDeps.js; path = CruxPay/Assets/promiseDeps.js; sourceTree = "<group>"; };
+		AD1041DE9BF8F09CFD0B4EDD3F44F478 /* promiseDeps.js */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.javascript; name = promiseDeps.js; path = CruxPay/Assets/promiseDeps.js; sourceTree = "<group>"; };
 		AD330339BFBBCC2B7CAEADB188D962B7 /* Blowfish.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Blowfish.swift; path = Sources/CryptoSwift/Blowfish.swift; sourceTree = "<group>"; };
 		AD737797B74F2C42018A4A581E45F5CD /* CMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CMAC.swift; path = Sources/CryptoSwift/CMAC.swift; sourceTree = "<group>"; };
 		AF810CE751D6C2F7ACB645306DA6AC56 /* PBKDF2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PBKDF2.swift; path = Sources/CryptoSwift/PKCS/PBKDF2.swift; sourceTree = "<group>"; };
@@ -228,7 +227,6 @@
 		CC9601FA35C57774D5843AA20AFF52C8 /* ChaCha20+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ChaCha20+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/ChaCha20+Foundation.swift"; sourceTree = "<group>"; };
 		CD42A2E1597AD4EF3AD546588008533D /* Pods-CruxPay_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CruxPay_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D08955E651CF735EA20FB62FE617291A /* CryptoSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = CryptoSwift.modulemap; sourceTree = "<group>"; };
-		D13E69599DEC37AF4E5118DF1EA0A51E /* cruxpay.js */ = {isa = PBXFileReference; includeInIndex = 1; name = cruxpay.js; path = CruxPay/Assets/cruxpay.js; sourceTree = "<group>"; };
 		D27F77414ACC3955CDCE33751684215B /* Checksum.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Checksum.swift; path = Sources/CryptoSwift/Checksum.swift; sourceTree = "<group>"; };
 		D77C74206827D4F5CE2E4D281A466367 /* GCM.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GCM.swift; path = Sources/CryptoSwift/BlockMode/GCM.swift; sourceTree = "<group>"; };
 		DB1E1E3353C89AA1F7BECFFC36FA25D8 /* AES.Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AES.Cryptors.swift; path = Sources/CryptoSwift/AES.Cryptors.swift; sourceTree = "<group>"; };
@@ -241,12 +239,12 @@
 		E380CA8E93F42F0DB8ECA36239EB9573 /* UInt16+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt16+Extension.swift"; path = "Sources/CryptoSwift/UInt16+Extension.swift"; sourceTree = "<group>"; };
 		E4300FB78BD7FD6311E25B5BDCF14C9F /* StreamEncryptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StreamEncryptor.swift; path = Sources/CryptoSwift/StreamEncryptor.swift; sourceTree = "<group>"; };
 		F144081AF867B03D108C79CD4BF32BBD /* UInt32+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UInt32+Extension.swift"; path = "Sources/CryptoSwift/UInt32+Extension.swift"; sourceTree = "<group>"; };
-		F1FE711F97BEA58DA35911B3525E6D02 /* Pods_CruxPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CruxPay_Tests.framework; path = "Pods-CruxPay_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F1FE711F97BEA58DA35911B3525E6D02 /* Pods_CruxPay_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CruxPay_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F46C64BB1EBDD411709126350C3EA7A4 /* CruxPay.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = CruxPay.xcconfig; sourceTree = "<group>"; };
 		F4CB151BC0F0328143362944FE7AD5DF /* HMAC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HMAC.swift; path = Sources/CryptoSwift/HMAC.swift; sourceTree = "<group>"; };
 		F69F06CFD0088CA07115E583ECCCBEA1 /* JavaScriptInterval.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JavaScriptInterval.swift; path = CruxPay/Classes/JavaScriptInterval.swift; sourceTree = "<group>"; };
 		F6B7287CD37AB3276F9DAEC59DBDAA1C /* SHA1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SHA1.swift; path = Sources/CryptoSwift/SHA1.swift; sourceTree = "<group>"; };
-		F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = CryptoSwift.framework; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F81274EDB681F11E7CB05F7DCA2BB33C /* CryptoSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CryptoSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2F1A8F355410C122D96451C2326F32 /* BlockModeOptions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockModeOptions.swift; path = Sources/CryptoSwift/BlockMode/BlockModeOptions.swift; sourceTree = "<group>"; };
 		FE8763CDD1BC9163E421A224599F62E2 /* DataTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DataTypes.swift; path = CruxPay/Classes/DataTypes.swift; sourceTree = "<group>"; };
 		FF5F2E7800B186E1D8BD4F3792F48C33 /* SecureBytes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SecureBytes.swift; path = Sources/CryptoSwift/SecureBytes.swift; sourceTree = "<group>"; };
@@ -368,7 +366,6 @@
 				9F17C75B36F8555C56FFFA776055CE65 /* ZeroPadding.swift */,
 				449970A21A79FA2A215A8E352CEDEA9B /* Support Files */,
 			);
-			name = CryptoSwift;
 			path = CryptoSwift;
 			sourceTree = "<group>";
 		};
@@ -399,7 +396,6 @@
 		722F8B9BEDF9F8C948F41AF479EFC536 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D13E69599DEC37AF4E5118DF1EA0A51E /* cruxpay.js */,
 				AD1041DE9BF8F09CFD0B4EDD3F44F478 /* promiseDeps.js */,
 				2F0A2DECC105BB102D7A83AB2607A485 /* requestDeps.js */,
 			);
@@ -672,7 +668,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C980876375204BB5D9BFC5A4EEE9DB9 /* cruxpay.js in Resources */,
 				EDC425FF03422546E4DF84F6E5A040A7 /* promiseDeps.js in Resources */,
 				6DCC3D8FF23BE48F5715322871FDA920 /* requestDeps.js in Resources */,
 			);
@@ -915,8 +910,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				STRIP_INSTALLED_PRODUCT = NO;
-				SWIFT_COMPILATION_MODE = wholemodule;
-				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
 			};

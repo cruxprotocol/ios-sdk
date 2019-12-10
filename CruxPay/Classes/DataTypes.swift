@@ -16,13 +16,10 @@ public struct CruxIDRegistrationStatus: Codable {
 
 public struct CruxClientInitConfig {
     public class Builder {
-        let _encryptionKeyValue: String
         var walletClientName: String?
         var privateKey: String?
         
-        public init() {
-            self._encryptionKeyValue = "fookey"
-        }
+        public init() {}
         public func setWalletClientName(walletClientName: String) -> Builder {
             self.walletClientName = walletClientName
             return self
@@ -39,13 +36,11 @@ public struct CruxClientInitConfig {
     private var builder: Builder;
     private var privateKey: String?;
     private var walletClientName: String;
-    private var _encryptionKeyValue: String;
     
     init(builder: Builder) {
         self.builder = builder;
         self.privateKey = builder.privateKey;
         self.walletClientName = builder.walletClientName!;
-        self._encryptionKeyValue = builder._encryptionKeyValue;
     }
     
     public func getCruxClientInitConfigString() -> String? {
