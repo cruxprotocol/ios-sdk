@@ -36,7 +36,7 @@ class CruxJSBridge {
         _ = context?.evaluateScript("var window = this;")
         _ = context?.evaluateScript(requestDeps)
         _ = context?.evaluateScript(promiseDeps)
-        JSFetch.provideToContext(context: context!, hostURL: "https://www.cruxpay.com")
+        JSFetch.provideToContext(context: context!)
         JSIntervals.provideToContext(context: context!)
         
         let cruxJS = try! String(contentsOfFile: cruxJSPath)
@@ -55,15 +55,6 @@ class CruxJSBridge {
     init(configBuilder: CruxClientInitConfig.Builder) {
         prepareCruxClientInitConfig(configBuilder: configBuilder)
         context?.evaluateScript("cruxClient = new window.CruxPay.CruxClient(cruxClientInitConfig)")
-        context?.evaluateScript("""
-            cruxClient.init()
-            .then(() => {
-                console.log('CruxClient initialized');
-            }).catch((err) => {
-                console.log('CruxClient error', err);
-                console.log(JSON.stringify(err));
-            })
-        """)
     }
     private func prepareCruxClientInitConfig(configBuilder: CruxClientInitConfig.Builder) -> Void {
         let cruxClientInitConfig: CruxClientInitConfig  = configBuilder.create();

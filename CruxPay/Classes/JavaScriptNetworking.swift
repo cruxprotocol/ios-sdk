@@ -10,18 +10,16 @@ import JavaScriptCore
 
 class JSFetch {
     
-    private static var hostURL: String = ""
     static var authorizationHeader: String?
     
     private static let fetch: @convention(block) (Any, Any) -> (Any) = { (url: Any, settings: Any) in
         // Check our arguments
-        let hostURL = URL(string: JSFetch.hostURL)
         var xsettings = settings as! Dictionary<String, Any>
         if (xsettings["method"] == nil)  {
             xsettings["method"] = "GET"
         }
         guard let urlString = url as? String,
-            let url = URL(string: urlString, relativeTo: hostURL),
+            let url = URL(string: urlString),
             let settings = xsettings as? NSDictionary,
             let method = settings["method"] as? String else {
                 print("Failure: Incorrect arguments")
@@ -78,8 +76,7 @@ class JSFetch {
         return promise!
     }
     
-    class func provideToContext(context: JSContext, hostURL: String) {
-        self.hostURL = hostURL
+    class func provideToContext(context: JSContext) {
         context.setObject(self.fetch, forKeyedSubscript: "fetch" as NSString)
     }
     

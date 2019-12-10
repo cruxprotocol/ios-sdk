@@ -27,18 +27,21 @@ public class CruxClient {
         return CruxClientError(message: jsError.objectForKeyedSubscript("message").toString(), errorCode: jsError.objectForKeyedSubscript("errorCode").toString(), stack: jsError.objectForKeyedSubscript("stack").toString(), name: jsError.objectForKeyedSubscript("name").toString())
     }
     
+    func executeAsyncWithErrorCallback(method: String, params: [Any], callback_fn: @escaping (JSValue) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
+        func error_callback_fn(jsObj: JSValue) -> () {
+            let cruxError = getCruxErrorFromJsError(jsError: jsObj)
+            onErrorResponse(cruxError)
+        }
+        self.jsBridge.executeAsync(method: method, params: params, onResponse: callback_fn, onErrorResponse: error_callback_fn(jsObj:))
+    }
+    
     public func getCruxIDState(onResponse: @escaping (CruxIDState) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
         func callback_fn (jsObj: JSValue) -> () {
             let data = getJSONData(jsObj: jsObj)
             let cruxState: CruxIDState = try! decoder.decode(CruxIDState.self, from: data)
             onResponse(cruxState)
         }
-        
-        func error_callback_fn(jsObj: JSValue) -> () {
-            let cruxError = getCruxErrorFromJsError(jsError: jsObj)
-            onErrorResponse(cruxError)
-        }
-        self.jsBridge.executeAsync(method: "getCruxIDState", params: [], onResponse: callback_fn(jsObj:), onErrorResponse: error_callback_fn(jsObj:))
+        executeAsyncWithErrorCallback(method: "getCruxIDState", params: [], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
     }
     
     public func isCruxIDAvailable(cruxIDSubdomain: String, onResponse: @escaping (Bool) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
@@ -46,11 +49,7 @@ public class CruxClient {
             let cruxIDAvailable = jsObj.toBool()
             onResponse(cruxIDAvailable)
         }
-        func error_callback_fn(jsObj: JSValue) -> () {
-            let cruxError = getCruxErrorFromJsError(jsError: jsObj)
-            onErrorResponse(cruxError)
-        }
-        self.jsBridge.executeAsync(method: "isCruxIDAvailable", params: [cruxIDSubdomain], onResponse: callback_fn(jsObj:), onErrorResponse: error_callback_fn(jsObj:))
+        executeAsyncWithErrorCallback(method: "isCruxIDAvailable", params: [cruxIDSubdomain], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
     }
     
     public func getAddressMap(onResponse: @escaping ([String: Address]) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
@@ -59,11 +58,7 @@ public class CruxClient {
             let addressMap: [String: Address] = try! decoder.decode([String: Address].self, from: data)
             onResponse(addressMap)
         }
-       func error_callback_fn(jsObj: JSValue) -> () {
-            let cruxError = getCruxErrorFromJsError(jsError: jsObj)
-            onErrorResponse(cruxError)
-        }
-        self.jsBridge.executeAsync(method: "getAddressMap", params: [], onResponse: callback_fn(jsObj:), onErrorResponse: error_callback_fn(jsObj:))
+        executeAsyncWithErrorCallback(method: "getAddressMap", params: [], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
     }
     
     public func putAddressMap(newAddressMap: [String: Address], onResponse: @escaping ([String: [String: Address]]) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
@@ -72,28 +67,16 @@ public class CruxClient {
             let addressMap: [String: [String: Address]] = try! decoder.decode([String: [String: Address]].self, from: data)
             onResponse(addressMap)
         }
-        func error_callback_fn(jsObj: JSValue) -> () {
-            let cruxError = getCruxErrorFromJsError(jsError: jsObj)
-            onErrorResponse(cruxError)
-        }
         let data = try! encoder.encode(newAddressMap)
         let addressMap = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
-        self.jsBridge.executeAsync(method: "putAddressMap", params: [addressMap], onResponse: callback_fn(jsObj:), onErrorResponse: error_callback_fn(jsObj:))
+        executeAsyncWithErrorCallback(method: "putAddressMap", params: [addressMap], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
     }
     
     public func registerCruxID(cruxIDSubdomain: String, onResponse: @escaping () -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
         func callback_fn (jsObj: JSValue) -> () {
-            if jsObj.isUndefined {
-                onResponse()
-            } else {
-                print(jsObj)
-            }
+            onResponse()
         }
-       func error_callback_fn(jsObj: JSValue) -> () {
-            let cruxError = getCruxErrorFromJsError(jsError: jsObj)
-            onErrorResponse(cruxError)
-        }
-        self.jsBridge.executeAsync(method: "registerCruxID", params: [cruxIDSubdomain], onResponse: callback_fn(jsObj:), onErrorResponse: error_callback_fn(jsObj:))
+        executeAsyncWithErrorCallback(method: "registerCruxID", params: [cruxIDSubdomain], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
     }
     
     public func resolveCurrencyAddressForCruxID(fullCruxID: String, walletCurrencySymbol: String, onResponse: @escaping (Address) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
@@ -102,10 +85,6 @@ public class CruxClient {
             let address: Address = try! decoder.decode(Address.self, from: data)
             onResponse(address)
         }
-       func error_callback_fn(jsObj: JSValue) -> () {
-            let cruxError = getCruxErrorFromJsError(jsError: jsObj)
-            onErrorResponse(cruxError)
-        }
-        self.jsBridge.executeAsync(method: "resolveCurrencyAddressForCruxID", params: [fullCruxID, walletCurrencySymbol], onResponse: callback_fn(jsObj:), onErrorResponse: error_callback_fn(jsObj:))
+        executeAsyncWithErrorCallback(method: "resolveCurrencyAddressForCruxID", params: [fullCruxID, walletCurrencySymbol], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
     }
 }
