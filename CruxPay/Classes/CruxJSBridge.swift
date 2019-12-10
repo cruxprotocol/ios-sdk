@@ -63,7 +63,6 @@ class CruxJSBridge {
         if (!cruxClientInitConfigString.isEmpty) {
             context?.evaluateScript("cruxClientInitConfig = \(cruxClientInitConfigString);")
             context?.evaluateScript("cruxClientInitConfig['storage'] = inmemStorage;")
-            context?.evaluateScript("cruxClientInitConfig['getEncryptionKey'] = function() { return 'fookey';}")
         }
     }
     
