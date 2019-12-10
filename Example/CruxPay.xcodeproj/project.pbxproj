@@ -7,27 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5162E86D239F875A00967B6E /* requestDeps.js in Resources */ = {isa = PBXBuildFile; fileRef = 5162E86A239F875A00967B6E /* requestDeps.js */; };
-		5162E86E239F875A00967B6E /* promiseDeps.js in Resources */ = {isa = PBXBuildFile; fileRef = 5162E86B239F875A00967B6E /* promiseDeps.js */; };
-		5162E86F239F875B00967B6E /* cruxpay.js in Resources */ = {isa = PBXBuildFile; fileRef = 5162E86C239F875A00967B6E /* cruxpay.js */; };
-		5162E873239F878500967B6E /* CruxJSBridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162E870239F878500967B6E /* CruxJSBridge.swift */; };
-		5162E874239F878500967B6E /* JavaScriptInterval.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162E871239F878500967B6E /* JavaScriptInterval.swift */; };
-		5162E875239F878500967B6E /* JavaScriptNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162E872239F878500967B6E /* JavaScriptNetworking.swift */; };
-		5162E878239F878D00967B6E /* DataTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162E876239F878D00967B6E /* DataTypes.swift */; };
-		5162E879239F878D00967B6E /* CruxClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5162E877239F878D00967B6E /* CruxClient.swift */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		EAE9A64D697429EB34BE5EAB /* Pods_CruxPay_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD5432069F43B19FDC81C2F /* Pods_CruxPay_Tests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5162E86A239F875A00967B6E /* requestDeps.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = requestDeps.js; path = ../../../CruxPay/Assets/requestDeps.js; sourceTree = "<group>"; };
-		5162E86B239F875A00967B6E /* promiseDeps.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = promiseDeps.js; path = ../../../CruxPay/Assets/promiseDeps.js; sourceTree = "<group>"; };
-		5162E86C239F875A00967B6E /* cruxpay.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; name = cruxpay.js; path = ../../../CruxPay/Assets/cruxpay.js; sourceTree = "<group>"; };
-		5162E870239F878500967B6E /* CruxJSBridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CruxJSBridge.swift; path = ../../../CruxPay/Classes/CruxJSBridge.swift; sourceTree = "<group>"; };
-		5162E871239F878500967B6E /* JavaScriptInterval.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JavaScriptInterval.swift; path = ../../../CruxPay/Classes/JavaScriptInterval.swift; sourceTree = "<group>"; };
-		5162E872239F878500967B6E /* JavaScriptNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JavaScriptNetworking.swift; path = ../../../CruxPay/Classes/JavaScriptNetworking.swift; sourceTree = "<group>"; };
-		5162E876239F878D00967B6E /* DataTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DataTypes.swift; path = ../../CruxPay/Classes/DataTypes.swift; sourceTree = "<group>"; };
-		5162E877239F878D00967B6E /* CruxClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CruxClient.swift; path = ../../CruxPay/Classes/CruxClient.swift; sourceTree = "<group>"; };
 		592B2C1FB752886E0C698CE0 /* CruxPay.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = CruxPay.podspec; path = ../CruxPay.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		607FACE51AFB9204008FA782 /* CruxPay_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CruxPay_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -51,37 +35,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5162E867239F86AB00967B6E /* CruxPay */ = {
-			isa = PBXGroup;
-			children = (
-				5162E877239F878D00967B6E /* CruxClient.swift */,
-				5162E876239F878D00967B6E /* DataTypes.swift */,
-				5162E869239F86C300967B6E /* Resources */,
-				5162E868239F86BB00967B6E /* JS Bridge */,
-			);
-			path = CruxPay;
-			sourceTree = "<group>";
-		};
-		5162E868239F86BB00967B6E /* JS Bridge */ = {
-			isa = PBXGroup;
-			children = (
-				5162E870239F878500967B6E /* CruxJSBridge.swift */,
-				5162E871239F878500967B6E /* JavaScriptInterval.swift */,
-				5162E872239F878500967B6E /* JavaScriptNetworking.swift */,
-			);
-			path = "JS Bridge";
-			sourceTree = "<group>";
-		};
-		5162E869239F86C300967B6E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				5162E86C239F875A00967B6E /* cruxpay.js */,
-				5162E86B239F875A00967B6E /* promiseDeps.js */,
-				5162E86A239F875A00967B6E /* requestDeps.js */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
 		590F68CBB3FF594BCFCDEE7B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,7 +47,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				5162E867239F86AB00967B6E /* CruxPay */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
@@ -209,9 +161,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5162E86E239F875A00967B6E /* promiseDeps.js in Resources */,
-				5162E86F239F875B00967B6E /* cruxpay.js in Resources */,
-				5162E86D239F875A00967B6E /* requestDeps.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,12 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5162E875239F878500967B6E /* JavaScriptNetworking.swift in Sources */,
-				5162E874239F878500967B6E /* JavaScriptInterval.swift in Sources */,
-				5162E879239F878D00967B6E /* CruxClient.swift in Sources */,
-				5162E878239F878D00967B6E /* DataTypes.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
-				5162E873239F878500967B6E /* CruxJSBridge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

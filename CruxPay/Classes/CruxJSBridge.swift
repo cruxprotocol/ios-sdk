@@ -17,7 +17,7 @@ class CruxJSBridge {
         let bundleURL = frameworkBundle.resourceURL!.appendingPathComponent("CruxPay.bundle")
         let resourceBundle = Bundle(url: bundleURL)
         
-        guard let cruxJSPath = resourceBundle?.path(forResource: "cruxpay", ofType: "js"),
+        guard let cruxJSPath = resourceBundle?.path(forResource: "cruxpay-0.1.5", ofType: "js"),
             let requestDepsPath = resourceBundle?.path(forResource: "requestDeps", ofType: "js"),
             let promiseDepsPath = resourceBundle?.path(forResource: "promiseDeps", ofType: "js") else {
                 print("unable to read resource files.")
