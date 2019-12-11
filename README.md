@@ -4,12 +4,6 @@
 [![License](https://img.shields.io/cocoapods/l/CruxPay.svg?style=flat)](https://cocoapods.org/pods/CruxPay)
 [![Platform](https://img.shields.io/cocoapods/p/CruxPay.svg?style=flat)](https://cocoapods.org/pods/CruxPay)
 
-## Example
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## Requirements
-
 ## Installation
 
 CruxPay is available through [CocoaPods](https://cocoapods.org). To install
@@ -183,12 +177,6 @@ To initialize the sdk, you need to minimally pass following details:-
        Address(addressHash: "rpfKAA2Ezqoq5wWo3XENdLYdZ8YGziz48h", secIdentifier: "123456")
     ```
     - Description: Address object. Here, **secIdentifier** is an optional field and sent as `nil` if not required by blockchain or blockchain supports yet you don’t want to add it.
-
-    
-
-## Author
-
-CoinSwitch
 
 ## License
 
