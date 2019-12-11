@@ -8,12 +8,6 @@
 import Foundation
 import JavaScriptCore
 
-public struct CruxIDRegistrationStatus: Codable {
-    public let status: String
-    public let statusDetail: String
-}
-
-
 public struct CruxClientInitConfig {
     public class Builder {
         var walletClientName: String?
@@ -56,21 +50,14 @@ public struct CruxClientInitConfig {
     }
 }
 
-public struct CruxParams {
-    public var args: [AnyObject]
-    public init(_ args: AnyObject...) {
-        self.args = args
-    }
-}
-
-protocol CruxIDStateExports : JSExport {
-    var cruxID:String? {get set}
-    var status:CruxIDRegistrationStatus? {get set}
+public struct CruxIDRegistrationStatus: Codable {
+    public let status: String
+    public let statusDetail: String
 }
 
 public struct CruxIDState: Codable {
-    public var cruxID: String? = nil
-    public var status: CruxIDRegistrationStatus? = nil
+    public var cruxID: String
+    public var status: CruxIDRegistrationStatus
 }
 
 public struct CruxClientError: Error {
@@ -87,4 +74,8 @@ public struct Address: Codable {
     }
     public let addressHash: String
     public let secIdentifier: String?
+}
+
+public struct CruxError: Error {
+    public let message: String
 }

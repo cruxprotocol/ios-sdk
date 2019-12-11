@@ -10,7 +10,10 @@ import JavaScriptCore
 import CryptoSwift
 
 class CruxJSBridge {
-    lazy var context: JSContext? = {
+    
+    var context: JSContext? = nil
+    
+    func getJSContext() throws -> JSContext {
         let context = JSContext()
         
         let frameworkBundle = Bundle(for: type(of: self))
@@ -20,8 +23,7 @@ class CruxJSBridge {
         guard let cruxJSPath = resourceBundle?.path(forResource: "cruxpay-0.1.5", ofType: "js"),
             let requestDepsPath = resourceBundle?.path(forResource: "requestDeps", ofType: "js"),
             let promiseDepsPath = resourceBundle?.path(forResource: "promiseDeps", ofType: "js") else {
-                print("unable to read resource files.")
-                return nil
+                throw CruxError(message: "Unexpected error: unable to read resource files.")
         }
         
         let requestDeps = try! String(contentsOfFile: requestDepsPath)
@@ -49,10 +51,11 @@ class CruxJSBridge {
                                  forKeyedSubscript: "_getRandomValues" as (NSCopying & NSObjectProtocol)?)
         _ = context?.evaluateScript(cruxJS)
         
-        return context
-    }()
+        return context!
+    }
     
     init(configBuilder: CruxClientInitConfig.Builder) {
+        context = try! getJSContext()
         prepareCruxClientInitConfig(configBuilder: configBuilder)
         context?.evaluateScript("cruxClient = new window.CruxPay.CruxClient(cruxClientInitConfig)")
     }
