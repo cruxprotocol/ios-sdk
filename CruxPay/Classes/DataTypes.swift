@@ -56,7 +56,7 @@ public struct CruxIDRegistrationStatus: Codable {
 }
 
 public struct CruxIDState: Codable {
-    public var cruxID: String
+    public var cruxID: String?
     public var status: CruxIDRegistrationStatus
 }
 
