@@ -7,6 +7,7 @@
 
 import Foundation
 import JavaScriptCore
+import os
 
 class JSFetch {
     
@@ -61,13 +62,13 @@ class JSFetch {
                     var response: JavaScriptCore.JSValue
                     response = globalResponse.construct(withArguments: [urlString, code, body, headers])!
                     if !(code >= 200 && code < 300) {
-                        print("Request denied: \(code) \(body)")
+                        os_log("Request denied: %s %s", log: OSLog.default, type: .debug, code, body)
                     }
                     resolve.call(withArguments: [response])
                 }
             })
             dataTask.resume()
-            print("Requesting: \(urlString) \(method)")
+            os_log("Requesting: %s %s", log: OSLog.default, type: .debug, urlString, method)
         }
         
         JSContext.current().setObject(promiseBlock, forKeyedSubscript: "JavaScriptNetworkingPromiseBridgeHelper" as NSString)
