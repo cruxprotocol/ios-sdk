@@ -11,6 +11,7 @@ import CryptoSwift
 
 class CruxJSBridge {
     
+    let cruxJsFileName: String = "cruxpay-0.1.9"
     var context: JSContext? = nil
     
     func getJSContext() throws -> JSContext {
@@ -20,7 +21,7 @@ class CruxJSBridge {
         let bundleURL = frameworkBundle.resourceURL!.appendingPathComponent("CruxPay.bundle")
         let resourceBundle = Bundle(url: bundleURL)
         
-        guard let cruxJSPath = resourceBundle?.path(forResource: "cruxpay-0.1.5", ofType: "js"),
+        guard let cruxJSPath = resourceBundle?.path(forResource: cruxJsFileName, ofType: "js"),
             let requestDepsPath = resourceBundle?.path(forResource: "requestDeps", ofType: "js"),
             let promiseDepsPath = resourceBundle?.path(forResource: "promiseDeps", ofType: "js") else {
                 throw CruxError(message: "Unexpected error: unable to read resource files.")
@@ -60,12 +61,13 @@ class CruxJSBridge {
         context?.evaluateScript("cruxClient = new window.CruxPay.CruxClient(cruxClientInitConfig)")
     }
     private func prepareCruxClientInitConfig(configBuilder: CruxClientInitConfig.Builder) -> Void {
-        let cruxClientInitConfig: CruxClientInitConfig  = configBuilder.create();
+        var cruxClientInitConfig: CruxClientInitConfig  = configBuilder.create();
         var cruxClientInitConfigString: String
         cruxClientInitConfigString = cruxClientInitConfig.getCruxClientInitConfigString()!;
         if (!cruxClientInitConfigString.isEmpty) {
             context?.evaluateScript("cruxClientInitConfig = \(cruxClientInitConfigString);")
             context?.evaluateScript("cruxClientInitConfig['storage'] = inmemStorage;")
+            cruxClientInitConfigString = ""
         }
     }
     
