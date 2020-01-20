@@ -73,6 +73,11 @@
 		B9C11D1C8D73C793C4433740C3BEC361 /* Array+Foundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 96B1EB4BB2C165DF2D8160937683144E /* Array+Foundation.swift */; };
 		BD53009205625CFE4DE761FC9CAB6BCD /* Rabbit.swift in Sources */ = {isa = PBXBuildFile; fileRef = A434943AF00A0746E68B268C3DDF9FD6 /* Rabbit.swift */; };
 		BEA8EECB7290F00B9B21B3CCF9E0EF42 /* CruxPay-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5659D711FF8F0A4787B3CB3F487F38C2 /* CruxPay-dummy.m */; };
+		BF1B71D723D1F35800543DEB /* SafetyChecks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1B71D623D1F35800543DEB /* SafetyChecks.swift */; };
+		BF1EA1E923D5A48B0076C58F /* AntiJailbreak.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1EA1E823D5A48B0076C58F /* AntiJailbreak.swift */; };
+		BF1EA1EB23D5AB6C0076C58F /* AntiDebug.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1EA1EA23D5AB6C0076C58F /* AntiDebug.swift */; };
+		BF1EA1F123D5ADD80076C58F /* AntiEmulator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1EA1F023D5ADD80076C58F /* AntiEmulator.swift */; };
+		BF1EA1F323D5AEA70076C58F /* AntiTamper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1EA1F223D5AEA70076C58F /* AntiTamper.swift */; };
 		C1B93DBE35DCEE9CA02D3524524A2FC1 /* DigestType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79AC5F76E71173073A70D32C0CF5BD39 /* DigestType.swift */; };
 		C31A555E2D25D1D3C49C86B420C9C890 /* CCM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F0080E3390F3817F6118755AEDAF13 /* CCM.swift */; };
 		C47F0CECFAA4675B2C3ED06E489A9C60 /* PKCS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4752C0C0C709634A51D4961871B2E9E /* PKCS7.swift */; };
@@ -221,6 +226,11 @@
 		B76B539D2B91425F32EC88B55FF1D68B /* JavaScriptNetworking.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = JavaScriptNetworking.swift; path = CruxPay/Classes/JavaScriptNetworking.swift; sourceTree = "<group>"; };
 		BB1F00206101BB3E5018E1D61D85AC8D /* HMAC+Foundation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "HMAC+Foundation.swift"; path = "Sources/CryptoSwift/Foundation/HMAC+Foundation.swift"; sourceTree = "<group>"; };
 		BDFB85B342F13C953F5FEDE3511CE488 /* HKDF.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = HKDF.swift; path = Sources/CryptoSwift/HKDF.swift; sourceTree = "<group>"; };
+		BF1B71D623D1F35800543DEB /* SafetyChecks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SafetyChecks.swift; path = CruxPay/Classes/SafetyChecks.swift; sourceTree = "<group>"; };
+		BF1EA1E823D5A48B0076C58F /* AntiJailbreak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AntiJailbreak.swift; path = CruxPay/Classes/AntiJailbreak.swift; sourceTree = "<group>"; };
+		BF1EA1EA23D5AB6C0076C58F /* AntiDebug.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AntiDebug.swift; path = CruxPay/Classes/AntiDebug.swift; sourceTree = "<group>"; };
+		BF1EA1F023D5ADD80076C58F /* AntiEmulator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AntiEmulator.swift; path = CruxPay/Classes/AntiEmulator.swift; sourceTree = "<group>"; };
+		BF1EA1F223D5AEA70076C58F /* AntiTamper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AntiTamper.swift; path = CruxPay/Classes/AntiTamper.swift; sourceTree = "<group>"; };
 		BFA35E39CC620C5B19D236C2AC1C94C7 /* Cryptors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cryptors.swift; path = Sources/CryptoSwift/Cryptors.swift; sourceTree = "<group>"; };
 		C5F88A386D7C42013AAD51284842D3AF /* BlockCipher.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlockCipher.swift; path = Sources/CryptoSwift/BlockCipher.swift; sourceTree = "<group>"; };
 		CC70E0B342C1E41C38450E04D3FF4C2E /* CryptoSwift-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "CryptoSwift-Info.plist"; sourceTree = "<group>"; };
@@ -475,6 +485,18 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
+		BF1B71D523D1F33700543DEB /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				BF1B71D623D1F35800543DEB /* SafetyChecks.swift */,
+				BF1EA1E823D5A48B0076C58F /* AntiJailbreak.swift */,
+				BF1EA1EA23D5AB6C0076C58F /* AntiDebug.swift */,
+				BF1EA1F023D5ADD80076C58F /* AntiEmulator.swift */,
+				BF1EA1F223D5AEA70076C58F /* AntiTamper.swift */,
+			);
+			name = Security;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
@@ -501,6 +523,7 @@
 		DD6F33F29233D82A8862FD5BC7497182 /* CruxPay */ = {
 			isa = PBXGroup;
 			children = (
+				BF1B71D523D1F33700543DEB /* Security */,
 				18B5CE5BF70DCCBEF789DB88546FA854 /* CruxClient.swift */,
 				B6C3558C2869B49485FA6CC23942CD42 /* CruxJSBridge.swift */,
 				FE8763CDD1BC9163E421A224599F62E2 /* DataTypes.swift */,
@@ -703,12 +726,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF1EA1F123D5ADD80076C58F /* AntiEmulator.swift in Sources */,
+				BF1B71D723D1F35800543DEB /* SafetyChecks.swift in Sources */,
 				89C521448B402B71792118E1F8437889 /* CruxClient.swift in Sources */,
+				BF1EA1F323D5AEA70076C58F /* AntiTamper.swift in Sources */,
 				E1757179DC940E69C46BFED2CE2A14F0 /* CruxJSBridge.swift in Sources */,
 				BEA8EECB7290F00B9B21B3CCF9E0EF42 /* CruxPay-dummy.m in Sources */,
+				BF1EA1EB23D5AB6C0076C58F /* AntiDebug.swift in Sources */,
 				CECE150789ABE39F37E60392868CE6D7 /* DataTypes.swift in Sources */,
 				289E64C43B7415979E74CCDC7CBDE655 /* JavaScriptInterval.swift in Sources */,
 				4CAC8D58DF45D68CD95D8F99EA08C2A0 /* JavaScriptNetworking.swift in Sources */,
+				BF1EA1E923D5A48B0076C58F /* AntiJailbreak.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
