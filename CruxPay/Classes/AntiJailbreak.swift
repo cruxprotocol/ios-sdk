@@ -8,7 +8,9 @@
 import Foundation
 import UIKit
 import Darwin // fork
-import MachO // dyld
+//import MachO // dyld
+// TODO: dyld was not importable. Enable checks(checkDYLD) once imported.
+
 public typealias FailedCheck = (check: JailbreakCheck, failMessage: String)
 
 public enum JailbreakCheck: CaseIterable {
@@ -18,7 +20,7 @@ public enum JailbreakCheck: CaseIterable {
     case restrictedDirectoriesWriteable
     case fork
     case symbolicLinks
-    case dyld
+//    case dyld
 }
 
 internal class AntiJailbreak {
@@ -59,8 +61,8 @@ internal class AntiJailbreak {
                 result = checkFork()
             case .symbolicLinks:
                 result = checkSymbolicLinks()
-            case .dyld:
-                result = checkDYLD()
+//            case .dyld:
+//                result = checkDYLD()
             }
 
             passed = passed && result.passed
@@ -265,34 +267,34 @@ internal class AntiJailbreak {
         return (true, "")
     }
 
-    private static func checkDYLD() -> CheckResult {
-
-        let suspiciousLibraries = [
-            "SubstrateLoader.dylib",
-            "SSLKillSwitch2.dylib",
-            "SSLKillSwitch.dylib",
-            "MobileSubstrate.dylib",
-            "TweakInject.dylib",
-            "CydiaSubstrate",
-            "cynject",
-            "CustomWidgetIcons",
-            "PreferenceLoader",
-            "RocketBootstrap",
-            "WeeLoader"
-        ]
-
-        for libraryIndex in 0..<_dyld_image_count() {
-
-            // _dyld_get_image_name returns const char * that needs to be casted to Swift String
-            guard let loadedLibrary = String(validatingUTF8: _dyld_get_image_name(libraryIndex)) else { continue }
-
-            for suspiciousLibrary in suspiciousLibraries {
-                if loadedLibrary.lowercased().contains(suspiciousLibrary.lowercased()) {
-                    return(false, "Suspicious library loaded: \(loadedLibrary)")
-                }
-            }
-        }
-
-        return (true, "")
-    }
+//    private static func checkDYLD() -> CheckResult {
+//
+//        let suspiciousLibraries = [
+//            "SubstrateLoader.dylib",
+//            "SSLKillSwitch2.dylib",
+//            "SSLKillSwitch.dylib",
+//            "MobileSubstrate.dylib",
+//            "TweakInject.dylib",
+//            "CydiaSubstrate",
+//            "cynject",
+//            "CustomWidgetIcons",
+//            "PreferenceLoader",
+//            "RocketBootstrap",
+//            "WeeLoader"
+//        ]
+//
+//        for libraryIndex in 0..<_dyld_image_count() {
+//
+//            // _dyld_get_image_name returns const char * that needs to be casted to Swift String
+//            guard let loadedLibrary = String(validatingUTF8: _dyld_get_image_name(libraryIndex)) else { continue }
+//
+//            for suspiciousLibrary in suspiciousLibraries {
+//                if loadedLibrary.lowercased().contains(suspiciousLibrary.lowercased()) {
+//                    return(false, "Suspicious library loaded: \(loadedLibrary)")
+//                }
+//            }
+//        }
+//
+//        return (true, "")
+//    }
 }

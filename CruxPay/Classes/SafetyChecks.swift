@@ -25,9 +25,12 @@ public class SafetyChecks {
     }
     
     private func isReleaseVersion() -> Bool {
+        // TODO: use .xcconfig to find is release version or not
         #if DEBUG
+            os_log("DEBUG version", log: OSLog.default, type: .debug);
             return false;
         #else
+            os_log("is RELEASE version", log: OSLog.default, type: .debug);
             return true;
         #endif
     }

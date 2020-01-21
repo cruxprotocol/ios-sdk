@@ -11,7 +11,7 @@ import CryptoSwift
 
 class CruxJSBridge {
     
-    let cruxJsFileName: String = "cruxpay-0.1.9"
+    let cruxJsFileName: String = "cruxpay-0.1.10-security-fixes"
     var context: JSContext? = nil
     
     func getJSContext() throws -> JSContext {

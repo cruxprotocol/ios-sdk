@@ -6,37 +6,38 @@
 //
 
 import Foundation
-import MachO // dyld
+//import MachO // dyld
+// TODO: dyld was not importable. Enable checks(checkDYLD) once imported.
 
 internal class AntiTamper {
 
     static func isReverseEngineered() -> Bool {
-        return (checkDYLD() || checkExistenceOfSuspiciousFiles() || checkOpenedPorts())
+        return (checkExistenceOfSuspiciousFiles() || checkOpenedPorts()) //|| checkDYLD() )
     }
 
-    private static func checkDYLD() -> Bool {
-
-        let suspiciousLibraries = [
-            "FridaGadget",
-            "frida", // Needle injects frida-somerandom.dylib
-            "cynject",
-            "libcycript"
-        ]
-
-        for libraryIndex in 0..<_dyld_image_count() {
-
-            // _dyld_get_image_name returns const char * that needs to be casted to Swift String
-            guard let loadedLibrary = String(validatingUTF8: _dyld_get_image_name(libraryIndex)) else { continue }
-
-            for suspiciousLibrary in suspiciousLibraries {
-                if loadedLibrary.lowercased().contains(suspiciousLibrary.lowercased()) {
-                    return true
-                }
-            }
-        }
-
-        return false
-    }
+//    private static func checkDYLD() -> Bool {
+//
+//        let suspiciousLibraries = [
+//            "FridaGadget",
+//            "frida", // Needle injects frida-somerandom.dylib
+//            "cynject",
+//            "libcycript"
+//        ]
+//
+//        for libraryIndex in 0..<_dyld_image_count() {
+//
+//            // _dyld_get_image_name returns const char * that needs to be casted to Swift String
+//            guard let loadedLibrary = String(validatingUTF8: _dyld_get_image_name(libraryIndex)) else { continue }
+//
+//            for suspiciousLibrary in suspiciousLibraries {
+//                if loadedLibrary.lowercased().contains(suspiciousLibrary.lowercased()) {
+//                    return true
+//                }
+//            }
+//        }
+//
+//        return false
+//    }
 
     private static func checkExistenceOfSuspiciousFiles() -> Bool {
 
