@@ -13,7 +13,11 @@ public class CruxClient {
     let decoder = JSONDecoder()
     let encoder = JSONEncoder()
     
-    public init(configBuilder: CruxClientInitConfig.Builder) {
+    public init(configBuilder: CruxClientInitConfig.Builder) throws {
+        let isUnsafe = SafetyChecks().checkSafety()
+        if (isUnsafe) {
+            throw CruxError(message: "CRUX SDK should not run in unsafe environment")
+        }
         self.jsBridge = CruxJSBridge(configBuilder: configBuilder)
     }
     
