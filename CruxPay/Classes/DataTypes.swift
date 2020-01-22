@@ -43,11 +43,11 @@ public struct CruxClientInitConfig {
         cruxClientInitConfigDict["walletClientName"] = self.walletClientName
         if self.privateKey != nil {
             cruxClientInitConfigDict["privateKey"] = self.privateKey
+            self.privateKey = nil
         }
         
         let cruxClientInitConfigJSONData = try! JSONSerialization.data(withJSONObject: cruxClientInitConfigDict, options: .prettyPrinted)
         let cruxClientInitConfigString = String(data: cruxClientInitConfigJSONData, encoding: String.Encoding.ascii)
-        self.privateKey = nil
         return cruxClientInitConfigString
     }
 }
