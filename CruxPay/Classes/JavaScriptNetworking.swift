@@ -23,7 +23,7 @@ class JSFetch {
             let url = URL(string: urlString),
             let settings = xsettings as? NSDictionary,
             let method = settings["method"] as? String else {
-                print("Failure: Incorrect arguments")
+                os_log("Failure: Incorrect arguments", log: OSLog.default, type: .error)
                 return JSContext.current().evaluateScript("Promise.reject(\"Incorrect arguments. Expected a URL and settings object.\");")!
         }
         
@@ -49,7 +49,7 @@ class JSFetch {
             let context = JSContext.current()!
             let dataTask = session.dataTask(with: request, completionHandler: { (data, response, error) in
                 if let error = error {
-                    print("Failure:")
+                    os_log("Failure:", log: OSLog.default, type: .error)
                     let jsError = context.evaluateScript("new Error(\"\(error.localizedDescription)\");")!
                     reject.call(withArguments: [jsError])
                 } else if let data = data {
@@ -62,7 +62,7 @@ class JSFetch {
                     var response: JavaScriptCore.JSValue
                     response = globalResponse.construct(withArguments: [urlString, code, body, headers])!
                     if !(code >= 200 && code < 300) {
-                        os_log("Request denied: %d %s", log: OSLog.default, type: .debug, code, body)
+                        os_log("Request denied: %d %s", log: OSLog.default, type: .error, code, body)
                     }
                     resolve.call(withArguments: [response])
                 }
@@ -82,4 +82,3 @@ class JSFetch {
     }
     
 }
-
