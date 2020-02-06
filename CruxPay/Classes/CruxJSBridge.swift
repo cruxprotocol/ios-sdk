@@ -8,9 +8,11 @@
 import Foundation
 import JavaScriptCore
 import CryptoSwift
+import os
 
 class CruxJSBridge {
     
+    let cruxJsFileName: String = "cruxpay-0.1.10-security-fixes"
     var context: JSContext? = nil
     
     func getJSContext() throws -> JSContext {
@@ -20,7 +22,7 @@ class CruxJSBridge {
         let bundleURL = frameworkBundle.resourceURL!.appendingPathComponent("CruxPay.bundle")
         let resourceBundle = Bundle(url: bundleURL)
         
-        guard let cruxJSPath = resourceBundle?.path(forResource: "cruxpay-0.1.5", ofType: "js"),
+        guard let cruxJSPath = resourceBundle?.path(forResource: cruxJsFileName, ofType: "js"),
             let requestDepsPath = resourceBundle?.path(forResource: "requestDeps", ofType: "js"),
             let promiseDepsPath = resourceBundle?.path(forResource: "promiseDeps", ofType: "js") else {
                 throw CruxError(message: "Unexpected error: unable to read resource files.")
@@ -28,13 +30,23 @@ class CruxJSBridge {
         
         let requestDeps = try! String(contentsOfFile: requestDepsPath)
         let promiseDeps = try! String(contentsOfFile: promiseDepsPath)
-        _ = context?.evaluateScript("var console = {log: function(message) { _consoleLog(message) }, warn: function(message) { _consoleLog(message) } }")
+        _ = context?.evaluateScript("var log = {debug: function(message) { _logDebug(message) }, info: function(message) { _logInfo(message) }, error: function(message) { _logError(message) } }")
         
-        let consoleLog: @convention(block) (String) -> Void = { message in
-            print("console.log: " + message)
+        let logDebug: @convention(block) (String) -> Void = { message in
+            os_log("%s", log: OSLog.default, type: .debug, message)
         }
-        context?.setObject(unsafeBitCast(consoleLog, to: AnyObject.self),
-           forKeyedSubscript: "_consoleLog" as NSCopying & NSObjectProtocol)
+        let logError: @convention(block) (String) -> Void = { message in
+            os_log("%s", log: OSLog.default, type: .error, message)
+        }
+        let logInfo: @convention(block) (String) -> Void = { message in
+            os_log("%s", log: OSLog.default, type: .info, message)
+        }
+        context?.setObject(unsafeBitCast(logDebug, to: AnyObject.self),
+                           forKeyedSubscript: "_logDebug" as NSCopying & NSObjectProtocol)
+        context?.setObject(unsafeBitCast(logError, to: AnyObject.self),
+                           forKeyedSubscript: "_logError" as NSCopying & NSObjectProtocol)
+        context?.setObject(unsafeBitCast(logInfo, to: AnyObject.self),
+                           forKeyedSubscript: "_logInfo" as NSCopying & NSObjectProtocol)
         _ = context?.evaluateScript("var window = this;")
         _ = context?.evaluateScript(requestDeps)
         _ = context?.evaluateScript(promiseDeps)
@@ -60,12 +72,13 @@ class CruxJSBridge {
         context?.evaluateScript("cruxClient = new window.CruxPay.CruxClient(cruxClientInitConfig)")
     }
     private func prepareCruxClientInitConfig(configBuilder: CruxClientInitConfig.Builder) -> Void {
-        let cruxClientInitConfig: CruxClientInitConfig  = configBuilder.create();
+        var cruxClientInitConfig: CruxClientInitConfig  = configBuilder.create();
         var cruxClientInitConfigString: String
         cruxClientInitConfigString = cruxClientInitConfig.getCruxClientInitConfigString()!;
         if (!cruxClientInitConfigString.isEmpty) {
             context?.evaluateScript("cruxClientInitConfig = \(cruxClientInitConfigString);")
             context?.evaluateScript("cruxClientInitConfig['storage'] = inmemStorage;")
+            cruxClientInitConfigString = ""
         }
     }
     
