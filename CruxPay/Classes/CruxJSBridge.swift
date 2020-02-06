@@ -8,6 +8,7 @@
 import Foundation
 import JavaScriptCore
 import CryptoSwift
+import os
 
 class CruxJSBridge {
     
@@ -29,13 +30,23 @@ class CruxJSBridge {
         
         let requestDeps = try! String(contentsOfFile: requestDepsPath)
         let promiseDeps = try! String(contentsOfFile: promiseDepsPath)
-        _ = context?.evaluateScript("var console = {log: function(message) { _consoleLog(message) }, warn: function(message) { _consoleLog(message) } }")
+        _ = context?.evaluateScript("var log = {debug: function(message) { _logDebug(message) }, info: function(message) { _logInfo(message) }, error: function(message) { _logError(message) } }")
         
-        let consoleLog: @convention(block) (String) -> Void = { message in
-            print("console.log: " + message)
+        let logDebug: @convention(block) (String) -> Void = { message in
+            os_log("%s", log: OSLog.default, type: .debug, message)
         }
-        context?.setObject(unsafeBitCast(consoleLog, to: AnyObject.self),
-           forKeyedSubscript: "_consoleLog" as NSCopying & NSObjectProtocol)
+        let logError: @convention(block) (String) -> Void = { message in
+            os_log("%s", log: OSLog.default, type: .error, message)
+        }
+        let logInfo: @convention(block) (String) -> Void = { message in
+            os_log("%s", log: OSLog.default, type: .info, message)
+        }
+        context?.setObject(unsafeBitCast(logDebug, to: AnyObject.self),
+                           forKeyedSubscript: "_logDebug" as NSCopying & NSObjectProtocol)
+        context?.setObject(unsafeBitCast(logError, to: AnyObject.self),
+                           forKeyedSubscript: "_logError" as NSCopying & NSObjectProtocol)
+        context?.setObject(unsafeBitCast(logInfo, to: AnyObject.self),
+                           forKeyedSubscript: "_logInfo" as NSCopying & NSObjectProtocol)
         _ = context?.evaluateScript("var window = this;")
         _ = context?.evaluateScript(requestDeps)
         _ = context?.evaluateScript(promiseDeps)

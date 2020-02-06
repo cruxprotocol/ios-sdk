@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import os
 
 internal class AntiDebug {
 
@@ -19,7 +19,7 @@ internal class AntiDebug {
         let sysctlRet = sysctl(&mib, UInt32(mib.count), &kinfo, &size, nil, 0)
 
         if sysctlRet != 0 {
-            print("Error occured when calling sysctl(). The debugger check may be not reliable")
+            os_log("Error occured when calling sysctl(). The debugger check may be not reliable", log: OSLog.default, type: .error)
         }
 
         return (kinfo.kp_proc.p_flag & P_TRACED) != 0
