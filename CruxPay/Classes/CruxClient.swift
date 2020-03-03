@@ -68,8 +68,8 @@ public class CruxClient {
     public func putAddressMap(newAddressMap: [String: Address], onResponse: @escaping ([String: [String: Address]]) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
         func callback_fn (jsObj: JSValue) -> () {
             let data = getJSONData(jsObj: jsObj)
-            let addressMap: [String: [String: Address]] = try! decoder.decode([String: [String: Address]].self, from: data)
-            onResponse(addressMap)
+            let putAddressMapResult: [String: [String: Address]] = try! decoder.decode([String: [String: Address]].self, from: data)
+            onResponse(putAddressMapResult)
         }
         let data = try! encoder.encode(newAddressMap)
         let addressMap = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
@@ -90,5 +90,41 @@ public class CruxClient {
             onResponse(address)
         }
         executeAsyncWithErrorCallback(method: "resolveCurrencyAddressForCruxID", params: [fullCruxID, walletCurrencySymbol], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
+    }
+    
+    public func resolveAssetAddressForCruxID(fullCruxID: String, assetMatcher: [String: String], onResponse: @escaping (Address) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
+        func callback_fn (jsObj: JSValue) -> () {
+            let data = getJSONData(jsObj: jsObj)
+            let address: Address = try! decoder.decode(Address.self, from: data)
+            onResponse(address)
+        }
+        executeAsyncWithErrorCallback(method: "resolveAssetAddressForCruxID", params: [fullCruxID, assetMatcher], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
+    }
+    
+    public func getEnabledAssetGroups(onResponse: @escaping ([String]) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
+        func callback_fn (jsObj: JSValue) -> () {
+            let assetGroups = jsObj.toArray()
+            onResponse(assetGroups as! [String])
+        }
+        executeAsyncWithErrorCallback(method: "getEnabledAssetGroups", params: [], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
+    }
+    
+    public func putEnabledAssetGroups(symbolAssetGroups: [String], onResponse: @escaping ([String]) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
+        func callback_fn (jsObj: JSValue) -> () {
+            let assetGroups = jsObj.toArray()
+            onResponse(assetGroups as! [String])
+        }
+        executeAsyncWithErrorCallback(method: "putEnabledAssetGroups", params: [symbolAssetGroups], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
+    }
+    
+    public func putPrivateAddressMap(fullCruxIDs: [String], newAddressMap: [String: Address], onResponse: @escaping ([String: [GenericError]]) -> (), onErrorResponse: @escaping (CruxClientError) -> ()) {
+        func callback_fn (jsObj: JSValue) -> () {
+            let data = getJSONData(jsObj: jsObj)
+            let putPrivateAddressMapResult: [String: [GenericError]] = try! decoder.decode([String: [GenericError]].self, from: data)
+            onResponse(putPrivateAddressMapResult)
+        }
+        let data = try! encoder.encode(newAddressMap)
+        let addressMap = try! JSONSerialization.jsonObject(with: data, options: .allowFragments) as! [String: Any]
+        executeAsyncWithErrorCallback(method: "putPrivateAddressMap", params: [fullCruxIDs, addressMap], callback_fn: callback_fn(jsObj:), onErrorResponse: onErrorResponse)
     }
 }

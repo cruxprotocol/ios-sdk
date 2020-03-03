@@ -12,7 +12,7 @@ import os
 
 class CruxJSBridge {
     
-    let cruxJsFileName: String = "cruxpay-0.1.10-security-fixes"
+    let cruxJsFileName: String = "cruxpay-0.2.8"
     var context: JSContext? = nil
     
     func getJSContext() throws -> JSContext {
@@ -41,6 +41,19 @@ class CruxJSBridge {
         let logInfo: @convention(block) (String) -> Void = { message in
             os_log("%s", log: OSLog.default, type: .info, message)
         }
+        
+        context?.exceptionHandler = { (ctx: JSContext!, value: JSValue!) in
+            // type of String
+            let stacktrace = value.objectForKeyedSubscript("stack").toString()
+            // type of Number
+            let lineNumber = value.objectForKeyedSubscript("line")
+            // type of Number
+            let column = value.objectForKeyedSubscript("column")
+            let moreInfo = "in method \(stacktrace)Line number in file: \(lineNumber), column: \(column)"
+            let message = "JS ERROR: \(value) \(moreInfo)"
+            os_log("%s", log: OSLog.default, type: .error, message)
+        }
+        
         context?.setObject(unsafeBitCast(logDebug, to: AnyObject.self),
                            forKeyedSubscript: "_logDebug" as NSCopying & NSObjectProtocol)
         context?.setObject(unsafeBitCast(logError, to: AnyObject.self),
