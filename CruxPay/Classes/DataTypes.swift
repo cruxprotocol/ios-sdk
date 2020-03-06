@@ -62,6 +62,12 @@ public struct CruxIDState: Codable {
     public var status: CruxIDRegistrationStatus
 }
 
+public struct GenericError: Codable {
+    public var errorCode: Int
+    public var errorEntity: String
+    public var errorMessage: String
+}
+
 public struct CruxClientError: Error {
     public let message: String
     public let errorCode: String
