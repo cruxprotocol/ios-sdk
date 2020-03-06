@@ -62,7 +62,7 @@ class JSFetch {
                     var response: JavaScriptCore.JSValue
                     response = globalResponse.construct(withArguments: [urlString, code, body, headers])!
                     if !(code >= 200 && code < 300) {
-                        os_log("Request denied: %d %s", log: OSLog.default, type: .error, code, body)
+                        os_log("Request denied: %d %s", log: OSLog.default, type: .debug, code, body)
                     }
                     resolve.call(withArguments: [response])
                 }
