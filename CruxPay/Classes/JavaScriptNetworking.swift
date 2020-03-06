@@ -36,7 +36,7 @@ class JSFetch {
             if let credentials = settings["credentials"] as? String, credentials == "include", let auth = JSFetch.authorizationHeader {
                 request.setValue(auth, forHTTPHeaderField: "Authorization")
             }
-            let headers = (settings["headers"] as? NSDictionary) as? NSDictionary ?? [:]
+            let headers = (settings["headers"] as? NSDictionary) ?? [:]
             for key in headers.allKeys {
                 if let value = headers[key] as? String, let key = key as? String {
                     request.setValue(value, forHTTPHeaderField: key)

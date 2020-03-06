@@ -49,8 +49,8 @@ class CruxJSBridge {
             let lineNumber = value.objectForKeyedSubscript("line")
             // type of Number
             let column = value.objectForKeyedSubscript("column")
-            let moreInfo = "in method \(stacktrace)Line number in file: \(lineNumber), column: \(column)"
-            let message = "JS ERROR: \(value) \(moreInfo)"
+            let moreInfo = "in method \(String(describing: stacktrace))Line number in file: \(String(describing: lineNumber)), column: \(String(describing: column))"
+            let message = "JS ERROR: \(String(describing: value)) \(moreInfo)"
             os_log("%s", log: OSLog.default, type: .error, message)
         }
         
@@ -108,7 +108,7 @@ class CruxJSBridge {
         let jsClient: JSValue = (context?.evaluateScript("cruxClient"))!
         let jsMethod = jsClient.objectForKeyedSubscript(method)
         let promise = jsMethod?.call(withArguments: params)
-        promise?.invokeMethod("then", withArguments: [jsSuccessCallback])
-        promise?.invokeMethod("catch", withArguments: [jsFailureCallback])
+        promise?.invokeMethod("then", withArguments: [jsSuccessCallback!])
+        promise?.invokeMethod("catch", withArguments: [jsFailureCallback!])
     }
 }

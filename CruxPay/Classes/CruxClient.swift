@@ -23,7 +23,7 @@ public class CruxClient {
     
     func getJSONData(jsObj: JSValue) -> Data {
         let swiftDict = jsObj.toDictionary()
-        let data = try! JSONSerialization.data(withJSONObject: swiftDict, options: JSONSerialization.WritingOptions.prettyPrinted)
+        let data = try! JSONSerialization.data(withJSONObject: swiftDict!, options: JSONSerialization.WritingOptions.prettyPrinted)
         return data
     }
     
